@@ -26,18 +26,18 @@ jobs:
       - name: Check Unit Test
         run: yarn test:coverage
 
-      # - name: Set unit test coverage
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     fail_ci_if_error: true
+      - name: Set unit test coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
 
-      # - name: Check e2e Test
-      #   uses: cypress-io/github-action@v5
-      #   with:
-      #     install-command: yarn install
-      #     command: yarn test:e2e
-      #   env:
-      #     CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+      - name: Check e2e Test
+        uses: cypress-io/github-action@v5
+        with:
+          install-command: yarn install
+          command: yarn test:e2e
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
