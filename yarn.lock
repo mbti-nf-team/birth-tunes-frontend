@@ -937,9 +937,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nf-team/eslint-config@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@nf-team/eslint-config@npm:2.0.1"
+"@nf-team/eslint-config@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@nf-team/eslint-config@npm:2.0.2"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^5.60.0
     "@typescript-eslint/parser": ^5.60.0
@@ -953,7 +953,16 @@ __metadata:
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-simple-import-sort: ^10.0.0
     eslint-plugin-unused-imports: ^2.0.0
-  checksum: 661cbf41b9b508ca32826a27a42ee6a71b8c79da3201070414673a9fd892f5897800fbabf4a20be23b673796c2cd78a2af65fbb02687d39ad9566d3d0eba3d4c
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^5.0.0 || ^6.0.0
+    eslint: ^8.0.0
+    eslint-plugin-import: ^2.0.0
+    eslint-plugin-jsx-a11y: ^6.0.0
+    eslint-plugin-react: ^7.0.0
+    eslint-plugin-react-hooks: ^4.0.0
+    eslint-plugin-simple-import-sort: ^10.0.0
+    eslint-plugin-unused-imports: ^2.0.0 || ^3.0.0
+  checksum: 3561a9b9ebbc9e85e059601dc5fa307bc31fcf8982320dbabdc486f2d8b9c46bb0d948b410edd98179d583aa4f8b11d00d5aaf7898e65e3b0598b07f44dfa37f
   languageName: node
   linkType: hard
 
@@ -7534,7 +7543,7 @@ __metadata:
   resolution: "unnamed_birth_tunes@workspace:."
   dependencies:
     "@next/eslint-plugin-next": ^13.4.1
-    "@nf-team/eslint-config": ^2.0.1
+    "@nf-team/eslint-config": ^2.0.2
     "@testing-library/jest-dom": ^6.0.0
     "@testing-library/react": ^14.0.0
     "@types/jest": ^29.5.3
