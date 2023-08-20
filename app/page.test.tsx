@@ -7,9 +7,9 @@ describe('HomePage', () => {
     <HomePage />
   ));
 
-  it('Should be visible "app/page.tsx"', () => {
+  it('Should be visible "test"', () => {
     const { container } = renderHomePage();
 
-    expect(container).toHaveTextContent('app/page.tsx');
+    expect(container).toHaveTextContent('test');
   });
 });
