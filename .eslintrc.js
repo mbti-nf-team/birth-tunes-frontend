@@ -3,6 +3,9 @@ module.exports = {
   env: {
     jest: true,
   },
+  ignorePatterns: [
+    '/.next',
+  ],
   extends: [
     '@nf-team/eslint-config',
     'plugin:@next/next/recommended',
