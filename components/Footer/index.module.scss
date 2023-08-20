@@ -1,0 +1,68 @@
+@import "/styles/main.scss";
+
+.footerWrapper {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 768px;
+
+  .footerItem {
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: color("scale-gray-800");
+    background-color: color("scale-gray-500");
+    width: 50%;
+
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+
+    &.left {
+      border-right: 1px solid color("scale-gray-900");
+
+      .marquee {
+        overflow: hidden;
+        position: relative;
+
+        .description::after {
+          content: "";
+          white-space: nowrap;
+          padding-right: 50px;
+        }
+
+        .description {
+          margin: 0;
+          padding-left: 100%;
+          display: inline-block;
+          white-space: nowrap;
+          animation-name: marquee;
+          animation-timing-function: linear;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+
+    &.right {
+      border-left: 1px solid color("scale-white");
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate(0%);
+  }
+  99%,
+  to {
+    transform: translate(-100%);
+  }
+}

@@ -1,3 +1,7 @@
+import Layout from '../components/Layout';
+
+import Providers from './providers';
+
 import 'styles/normalize.css';
 import 'styles/global.scss';
 
@@ -18,7 +22,13 @@ function RootLayout({ children }: {
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Providers>
+          <Layout>
+            {children}
+          </Layout>
+        </Providers>
+      </body>
     </html>
   );
 }

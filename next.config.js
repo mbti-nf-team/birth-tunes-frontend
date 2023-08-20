@@ -7,6 +7,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     typedRoutes: true,
+    esmExternals: 'loose',
   },
 };
 
