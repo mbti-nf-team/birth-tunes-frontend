@@ -8,6 +8,15 @@ import 'styles/global.scss';
 export const metadata = {
   title: 'Birth Tunes',
   description: '내 생일 1위 노래 찾기',
+  openGraph: {
+    title: 'Birth Tunes',
+    description: '내 생일 1위 노래 찾기',
+    url: process.env.NEXT_PUBLIC_ORIGIN,
+  },
+  twitter: {
+    description: '내 생일 1위 노래 찾기',
+    title: 'Birth Tunes',
+  },
 };
 
 function RootLayout({ children }: {
