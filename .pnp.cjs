@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@next/eslint-plugin-next", "npm:13.4.1"],\
+            ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
             ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
@@ -1476,6 +1477,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-13.4.1-798945f68e/node_modules/@next/swc-win32-x64-msvc/",\
           "packageDependencies": [\
             ["@next/swc-win32-x64-msvc", "npm:13.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@nf-team/core", [\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/@nf-team-core-npm-2.0.1-3735619279-3ba9bb2fda.zip/node_modules/@nf-team/core/",\
+          "packageDependencies": [\
+            ["@nf-team/core", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9730,6 +9740,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["unnamed_birth_tunes", "workspace:."],\
             ["@next/eslint-plugin-next", "npm:13.4.1"],\
+            ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
             ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
