@@ -1,6 +1,8 @@
 import { useCallback, useState } from 'react';
 import { SelectDatepicker } from 'react-select-datepicker';
 
+import Button from '../../common/Button';
+
 import styles from './index.module.scss';
 
 type Props = {
@@ -21,9 +23,9 @@ function BirthSongForm({ onSubmit }: Props) {
         onDateChange={onDateChange}
         order="year/month/day"
       />
-      <button type="button" onClick={() => onSubmit(birthDate)} disabled={!birthDate}>
+      <Button buttonType="primary" onClick={() => onSubmit(birthDate)} disabled={!birthDate}>
         계속하려면 누르세요
-      </button>
+      </Button>
     </div>
   );
 }

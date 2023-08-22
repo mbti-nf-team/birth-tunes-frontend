@@ -54,6 +54,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/order': 'off',
     '@next/next/no-html-link-for-pages': ['error', 'app/'],
+    '@typescript-eslint/no-explicit-any': 'warn',
     'simple-import-sort/imports': ['error', {
       groups: [
         ['^\\u0000'],
