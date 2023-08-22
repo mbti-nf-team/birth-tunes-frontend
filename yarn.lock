@@ -937,6 +937,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nf-team/core@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@nf-team/core@npm:2.0.1"
+  checksum: 3ba9bb2fda840e34409fbe3ba55311814f7dd3f17448858b76195cde9295805725fbac7f9fa7eb798ed6c82e5067838fbe01cdd6fb5b3f40fa3e518cbfe6856f
+  languageName: node
+  linkType: hard
+
 "@nf-team/eslint-config@npm:^2.0.2":
   version: 2.0.2
   resolution: "@nf-team/eslint-config@npm:2.0.2"
@@ -7774,6 +7781,7 @@ __metadata:
   resolution: "unnamed_birth_tunes@workspace:."
   dependencies:
     "@next/eslint-plugin-next": ^13.4.1
+    "@nf-team/core": ^2.0.1
     "@nf-team/eslint-config": ^2.0.2
     "@nf-team/react": ^2.0.1
     "@tanstack/react-query": ^4.33.0
