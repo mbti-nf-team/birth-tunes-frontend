@@ -9,21 +9,16 @@
   justify-content: center;
   width: 100%;
   max-width: 768px;
+  margin: 0 -20px;
 
   .footerItem {
+    @include text("Body", "scale-gray-800");
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 8px 0px;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
-    color: color("scale-gray-800");
     background-color: color("scale-gray-500");
     width: 50%;
-
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
 
     &.left {
       border-right: 1px solid color("scale-gray-900");

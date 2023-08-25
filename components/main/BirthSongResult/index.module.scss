@@ -1,3 +1,5 @@
+@import "/styles/main.scss";
+
 .resultWrapper {
   width: 100%;
   display: flex;
@@ -14,19 +16,14 @@
     background-color: color("scale-yellow");
 
     .titleWrapper {
+      @include text("Body", "scale-gray-900");
       display: flex;
       padding: 0.75rem;
       justify-content: center;
       align-items: center;
       gap: 0.625rem;
       flex: 1 0 0;
-
       text-align: center;
-      font-size: 1.5rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.5rem;
-      color: color("scale-gray-900");
       border: 2px solid color("scale-gray-900");
     }
   }
