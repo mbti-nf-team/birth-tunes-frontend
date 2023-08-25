@@ -1,15 +1,21 @@
 @import "/styles/main.scss";
 
 .footerWrapper {
-  position: fixed;
-  bottom: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: fixed;
   max-width: 768px;
   margin: 0 -20px;
+  bottom: 0;
+  
+  @include desktop {
+    position: initial;
+    max-width: auto;
+    margin: 0;
+  }
 
   .footerItem {
     @include text("Body", "scale-gray-800");
@@ -56,7 +62,6 @@
   from {
     transform: translate(0%);
   }
-  99%,
   to {
     transform: translate(-100%);
   }
