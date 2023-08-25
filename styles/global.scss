@@ -1,13 +1,13 @@
 @import "./mixin/text.scss";
 
-@font-face {
-  font-family: "DungGeunMo";
-  src: url(./fonts/korean/DungGeunMo.woff2) format("woff2"),
-    url(./fonts/korean/DungGeunMo.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  // unicode-range: U+AC00-D7A3;
-}
+// @font-face {
+//   font-family: "DungGeunMo";
+//   src: url(./fonts/korean/DungGeunMo.woff2) format("woff2"),
+//     url(./fonts/korean/DungGeunMo.woff) format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+//   unicode-range: U+AC00-D7A3;
+// }
 
 // @font-face {
 //   font-family: "Sysfont";
@@ -58,10 +58,10 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "DungGeunMo", -apple-system, BlinkMacSystemFont, system-ui,
-    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  // font-family: "DungGeunMo", -apple-system, BlinkMacSystemFont, system-ui,
+  //   Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+  //   "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  //   sans-serif;
 }
 
 body {
