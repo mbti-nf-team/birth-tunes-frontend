@@ -1,6 +1,7 @@
 @import "/styles/main.scss";
 
 .buttonWrapper {
+  @include text("Body");
   position: relative;
   transform: translate(0, 0);
   user-select: none;
@@ -15,11 +16,6 @@
   text-align: center;
   padding: 5px 1rem 7px 1rem;
   border: 2px solid;
-
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5rem;
 
   @media (max-width: 375px) {
     width: 100%;

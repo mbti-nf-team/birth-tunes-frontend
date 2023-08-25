@@ -18,8 +18,18 @@
   --scale-blue-900: #333399;
   --scale-cyan-300: #5cfffd;
   --scale-cyan-600: #00adab;
-  --scale-cyan-700: #02A2A0;
+  --scale-cyan-700: #02a2a0;
   --scale-cyan-800: #046261;
   --scale-indigo: #0000af;
   --scale-yellow: #ffff99;
+}
+
+:root {
+  --headline-font-size: 2rem;
+  --headline-line-height: 2rem;
+  --headline-font-weight: 400;
+
+  --body-font-size: 1.5rem;
+  --body-line-height: 1.5rem;
+  --body-font-weight: 400;
 }
