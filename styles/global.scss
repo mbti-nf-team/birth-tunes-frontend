@@ -1,4 +1,3 @@
-@import "./_variables.scss";
 @import "./mixin/text.scss";
 
 @font-face {
@@ -18,6 +17,43 @@
 //   font-style: normal;
 //   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 // }
+
+:root {
+  --scale-white: #ffffff;
+  --scale-black: #000000;
+
+  /* grays */
+  --scale-gray-200: #eeeeee;
+  --scale-gray-300: #dddddd;
+  --scale-gray-400: #cccccc;
+  --scale-gray-500: #bbbbbb;
+  --scale-gray-600: #999999;
+  --scale-gray-700: #808080;
+  --scale-gray-800: #666666;
+  --scale-gray-900: #262626;
+
+  /* colours */
+  --scale-blue-300: #ccccff;
+  --scale-blue-700: #9a9bcf;
+  --scale-blue-900: #333399;
+  --scale-cyan-300: #5cfffd;
+  --scale-cyan-600: #00adab;
+  --scale-cyan-700: #02a2a0;
+  --scale-cyan-800: #046261;
+  --scale-indigo: #0000af;
+  --scale-yellow: #ffff99;
+}
+
+:root {
+  --headline-font-size: 2rem;
+  --headline-line-height: 2rem;
+  --headline-font-weight: 400;
+
+  --body-font-size: 1.5rem;
+  --body-line-height: 1.5rem;
+  --body-font-weight: 400;
+}
+
 
 html {
   -webkit-font-smoothing: antialiased;
