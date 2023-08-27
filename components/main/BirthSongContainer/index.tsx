@@ -2,21 +2,19 @@
 
 import { useState } from 'react';
 
-import { removeNullable } from '@nf-team/core';
-
 import BirthSongForm from '../BirthSongForm';
 import BirthSongResult from '../BirthSongResult';
 
 type Props = {
-  defaultBirthDate?: string;
+  defaultBirthDate: string;
 };
 
 function BirthSongContainer({ defaultBirthDate }: Props) {
-  const [birthDate, setBirthDate] = useState<string>(removeNullable(defaultBirthDate));
+  const [birthDate, setBirthDate] = useState<string>(defaultBirthDate);
 
   return (
     <>
-      <BirthSongForm defaultBirthDate={birthDate} onSubmit={setBirthDate} />
+      <BirthSongForm defaultBirthDate={defaultBirthDate} onSubmit={setBirthDate} />
       <BirthSongResult birthDate={birthDate} />
     </>
   );

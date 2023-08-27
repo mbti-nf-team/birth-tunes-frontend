@@ -1,5 +1,6 @@
 import { Metadata, ResolvingMetadata } from 'next';
 
+import { removeNullable } from '@nf-team/core';
 import dayjs from 'dayjs';
 
 import Footer from '../components/Footer';
@@ -51,7 +52,7 @@ function Home({ searchParams }: Props) {
         <h1 className={styles.title}>
           {'+-------------------+\n¦      내 생일      ¦\n¦   1위 노래 찾기   ¦\n+-------------------+'}
         </h1>
-        <BirthSongContainer defaultBirthDate={searchParams?.date} />
+        <BirthSongContainer defaultBirthDate={removeNullable(searchParams?.date)} />
       </main>
       <Footer />
     </>

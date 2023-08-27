@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import Button from '../../common/Button';
 import BirthSelectDatePicker from '../BirthSelectDatePicker';
@@ -11,15 +11,9 @@ type Props = {
 };
 
 function BirthSongForm({ onSubmit, defaultBirthDate }: Props) {
-  const [birthDate, setBirthDate] = useState<string>('');
+  const [birthDate, setBirthDate] = useState<string>(defaultBirthDate);
 
   const onBirthChange = useCallback((date: string) => setBirthDate(date), []);
-
-  useEffect(() => {
-    if (defaultBirthDate) {
-      setBirthDate(defaultBirthDate);
-    }
-  }, [defaultBirthDate]);
 
   return (
     <div className={styles.formWrapper}>

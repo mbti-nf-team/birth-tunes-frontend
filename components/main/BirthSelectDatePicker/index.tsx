@@ -60,7 +60,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
       const birthDate = dayjs(defaultBirthDate);
 
       setYear(birthDate.year().toString());
-      setMonth(birthDate.month().toString());
+      setMonth((birthDate.month() + 1).toString());
       setDays(birthDate.date().toString());
     }
   }, [defaultBirthDate]);
