@@ -6,12 +6,12 @@ import BirthSongForm from '../BirthSongForm';
 import BirthSongResult from '../BirthSongResult';
 
 function BirthSongContainer() {
-  const [birthDateForm, onSubmit] = useState<Date | null>(null);
+  const [birthDate, setBirthDate] = useState<string>('');
 
   return (
     <>
-      <BirthSongForm onSubmit={onSubmit} />
-      <BirthSongResult birthDate={birthDateForm} />
+      <BirthSongForm onSubmit={setBirthDate} />
+      <BirthSongResult birthDate={birthDate} />
     </>
   );
 }

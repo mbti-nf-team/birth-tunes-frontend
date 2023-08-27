@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import {
-  ButtonHTMLAttributes, HTMLProps, PropsWithChildren, ReactElement, ReactNode,
+  ButtonHTMLAttributes, HTMLProps, PropsWithChildren, ReactElement,
 } from 'react';
 
 import Link from 'next/link';
@@ -14,7 +14,6 @@ type ButtonType = 'primary' | 'secondary';
 interface Props extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, 'size'> {
   buttonType?: ButtonType;
   width?: `${number}px`;
-  onlyIcon?: ReactNode;
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
 }
 

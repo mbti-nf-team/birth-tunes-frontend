@@ -1,6 +1,6 @@
 @import "/styles/main.scss";
 
-.buttonWrapper {
+.selectWrapper {
   @include text("Body");
   position: relative;
   transform: translate(0, 0);
@@ -14,6 +14,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  outline: none;
+  border-radius: 0px;
   padding: 5px 1rem 7px 1rem;
   border: 2px solid;
 
@@ -34,7 +36,7 @@
     border-right-color: color("scale-gray-700");
   }
 
-  &:not(:disabled):not(.disabled):active {
+  &:not(:disabled):not(.disabled):focus {
     &.primary {
       color: color("scale-cyan-300");
       background-color: color("scale-cyan-700");
