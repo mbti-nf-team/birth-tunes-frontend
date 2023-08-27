@@ -6657,15 +6657,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-select-datepicker@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "react-select-datepicker@npm:2.1.2"
-  peerDependencies:
-    react: ">=17.0.2"
-  checksum: 1daaaaaddcd6ed8c7d3a0d91a71510eeb041b27deb4bb99ab84356aa6cebf6b98332913f0244094b54530303dc917cd4f72def815261ffec7eb5462a7971b365
-  languageName: node
-  linkType: hard
-
 "react-shallow-renderer@npm:^16.15.0":
   version: 16.15.0
   resolution: "react-shallow-renderer@npm:16.15.0"
@@ -7819,7 +7810,6 @@ __metadata:
     qs: ^6.11.2
     react: 18.2.0
     react-dom: 18.2.0
-    react-select-datepicker: ^2.1.2
     react-test-renderer: ^18.2.0
     sass: ^1.66.1
     start-server-and-test: ^1.14.0
