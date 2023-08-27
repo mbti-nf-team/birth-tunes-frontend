@@ -54,7 +54,6 @@
   --body-font-weight: 400;
 }
 
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,6 +69,15 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+  }
 }
 
 h1,

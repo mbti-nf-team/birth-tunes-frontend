@@ -9,7 +9,7 @@ import IframeVideoPlayer from '../IframeVideoPlayer';
 import styles from './index.module.scss';
 
 type Props = {
-  birthDate: Date | null;
+  birthDate: string;
 };
 
 function BirthSongResult({ birthDate }: Props) {
