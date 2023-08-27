@@ -1,23 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import { useSearchParams } from 'next/navigation';
+import { removeNullable } from '@nf-team/core';
 
 import BirthSongForm from '../BirthSongForm';
 import BirthSongResult from '../BirthSongResult';
 
-function BirthSongContainer() {
-  const { get } = useSearchParams();
-  const [birthDate, setBirthDate] = useState<string>('');
+type Props = {
+  defaultBirthDate?: string;
+};
 
-  useEffect(() => {
-    const defaultBirthDate = get('date');
-
-    if (defaultBirthDate) {
-      setBirthDate(defaultBirthDate);
-    }
-  }, []);
+function BirthSongContainer({ defaultBirthDate }: Props) {
+  const [birthDate, setBirthDate] = useState<string>(removeNullable(defaultBirthDate));
 
   return (
     <>
