@@ -15,9 +15,10 @@ const MONTH_RANGE = 12;
 
 type Props = {
   onBirthChange: (date: string) => void;
+  defaultBirthDate: string;
 };
 
-function BirthSelectDatePicker({ onBirthChange }: Props) {
+function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
   const [year, setYear] = useState<string>('');
   const [month, setMonth] = useState<string>('');
   const [days, setDays] = useState<string>('');
@@ -53,6 +54,16 @@ function BirthSelectDatePicker({ onBirthChange }: Props) {
       onBirthChange(birthDate);
     }
   }, [year, month, days]);
+
+  useEffect(() => {
+    if (defaultBirthDate) {
+      const birthDate = dayjs(defaultBirthDate);
+
+      setYear(birthDate.year().toString());
+      setMonth(birthDate.month().toString());
+      setDays(birthDate.date().toString());
+    }
+  }, [defaultBirthDate]);
 
   return (
     <div className={styles.birthSelectDatePickerWrapper}>

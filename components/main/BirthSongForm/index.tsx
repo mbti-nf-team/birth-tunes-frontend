@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import Button from '../../common/Button';
 import BirthSelectDatePicker from '../BirthSelectDatePicker';
@@ -7,16 +7,23 @@ import styles from './index.module.scss';
 
 type Props = {
   onSubmit: (date: string) => void;
+  defaultBirthDate: string;
 };
 
-function BirthSongForm({ onSubmit }: Props) {
+function BirthSongForm({ onSubmit, defaultBirthDate }: Props) {
   const [birthDate, setBirthDate] = useState<string>('');
 
   const onBirthChange = useCallback((date: string) => setBirthDate(date), []);
 
+  useEffect(() => {
+    if (defaultBirthDate) {
+      setBirthDate(defaultBirthDate);
+    }
+  }, [defaultBirthDate]);
+
   return (
     <div className={styles.formWrapper}>
-      <BirthSelectDatePicker onBirthChange={onBirthChange} />
+      <BirthSelectDatePicker defaultBirthDate={defaultBirthDate} onBirthChange={onBirthChange} />
       <Button buttonType="primary" onClick={() => onSubmit(birthDate)} disabled={!birthDate}>
         계속하려면 누르세요
       </Button>
