@@ -15,7 +15,7 @@ type Props = {
 
 export async function generateMetadata(
   { searchParams }: Props,
-  parent?: ResolvingMetadata,
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const date = searchParams?.date;
 
@@ -23,7 +23,8 @@ export async function generateMetadata(
     return metadata;
   }
 
-  const previousImages = (await parent)?.openGraph?.images || [];
+  const parentMetadata = await parent;
+  const previousImages = parentMetadata.openGraph?.images || [];
 
   const description = `${dayjs(date).format('YYYY년 MM월 DD일')} 1위 노래는?`;
 
