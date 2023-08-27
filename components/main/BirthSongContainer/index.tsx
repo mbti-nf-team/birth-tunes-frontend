@@ -1,27 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
 import BirthSongForm from '../BirthSongForm';
 import BirthSongResult from '../BirthSongResult';
 
-function BirthSongContainer() {
-  const { get } = useSearchParams();
-  const [birthDate, setBirthDate] = useState<string>('');
+type Props = {
+  defaultBirthDate: string;
+};
 
-  useEffect(() => {
-    const defaultBirthDate = get('date');
-
-    if (defaultBirthDate) {
-      setBirthDate(defaultBirthDate);
-    }
-  }, []);
+function BirthSongContainer({ defaultBirthDate }: Props) {
+  const [birthDate, setBirthDate] = useState<string>(defaultBirthDate);
 
   return (
     <>
-      <BirthSongForm defaultBirthDate={birthDate} onSubmit={setBirthDate} />
+      <BirthSongForm defaultBirthDate={defaultBirthDate} onSubmit={setBirthDate} />
       <BirthSongResult birthDate={birthDate} />
     </>
   );
