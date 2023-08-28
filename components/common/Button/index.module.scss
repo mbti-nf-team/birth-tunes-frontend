@@ -16,14 +16,7 @@
   text-align: center;
   padding: 5px 1rem 7px 1rem;
   border: 2px solid;
-
-  @include mobile {
-    width: 100%;
-  }
-
-  @include desktop {
-    width: 100%;
-  }
+  width: 100%;
 
   &:disabled {
     color: color("scale-gray-700");
