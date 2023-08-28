@@ -14,10 +14,12 @@ export const metadata = {
     title: 'Birth Tunes',
     description: '내 생일 1위 노래 찾기',
     url: process.env.NEXT_PUBLIC_ORIGIN,
+    images: ['./share-img.png'],
   },
   twitter: {
     description: '내 생일 1위 노래 찾기',
     title: 'Birth Tunes',
+    images: ['./share-img.png'],
   },
 };
 
