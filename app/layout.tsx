@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 
+import Toast from '../components/common/Toast';
 import Layout from '../components/Layout';
 
 import Providers from './providers';
@@ -66,6 +67,7 @@ function RootLayout({ children }: {
         <Providers>
           <Layout>
             {children}
+            <Toast />
           </Layout>
         </Providers>
       </body>
