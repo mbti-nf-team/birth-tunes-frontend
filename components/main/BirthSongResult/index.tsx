@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 
+import useRenderToast from '../../../hooks/useRenderToast';
 import { fetchMusicChartSong } from '../../../lib/apis/search';
 import Button from '../../common/Button';
 import IframeVideoPlayer from '../IframeVideoPlayer';
@@ -14,6 +15,8 @@ type Props = {
 };
 
 function BirthSongResult({ birthDate }: Props) {
+  const renderToast = useRenderToast();
+
   const { data: findBirthSong, isSuccess } = useQuery(['musicChartSong', birthDate], () => fetchMusicChartSong({
     date: dayjs(birthDate).format('YYYY-MM-DD'),
     musicChartId: 1,
@@ -26,9 +29,10 @@ function BirthSongResult({ birthDate }: Props) {
   const onClickShareLink = async () => {
     try {
       await navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_ORIGIN}?date=${birthDate}`);
+
+      renderToast({ description: 'URL을 복사했습니다.', type: 'success' });
     } catch (error) {
-      // TODO - 실패 케이스 정의 후 변경
-      console.error(error);
+      renderToast({ description: 'URL 복사에 실패했습니다.', type: 'error' });
     }
   };
 
