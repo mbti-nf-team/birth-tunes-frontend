@@ -19,10 +19,11 @@
 // }
 
 :root {
+  /* default */
   --scale-white: #ffffff;
   --scale-black: #000000;
 
-  /* grays */
+  /* basic */
   --scale-gray-200: #eeeeee;
   --scale-gray-300: #dddddd;
   --scale-gray-400: #cccccc;
@@ -32,16 +33,28 @@
   --scale-gray-800: #666666;
   --scale-gray-900: #262626;
 
-  /* colours */
-  --scale-blue-300: #ccccff;
-  --scale-blue-700: #9a9bcf;
-  --scale-blue-900: #333399;
+  --scale-cyan-200: #c2fffe;
   --scale-cyan-300: #5cfffd;
+  --scale-cyan-400: #02edeb;
+  --scale-cyan-500: #02cfcd;
   --scale-cyan-600: #00adab;
-  --scale-cyan-700: #02a2a0;
+  --scale-cyan-700: #029795;
   --scale-cyan-800: #046261;
+  --scale-cyan-900: #023c3c;
+
+  --scale-ivory: #ffff99;
+
+  /* variation */
+  --scale-blue: #5555ff;
+  --scale-frenchblue: #666699;
   --scale-indigo: #0000af;
-  --scale-yellow: #ffff99;
+  --scale-emerald: #00ad00;
+  --scale-green: #00ff26;
+  --scale-grass: #999900;
+  --scale-gold: #d0af3e;
+  --scale-yellow: #ffff05;
+  --scale-copper: #cc6633;
+  --scale-crimson: #b80000;
 }
 
 :root {
