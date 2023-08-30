@@ -6,6 +6,7 @@ import dayjs from 'dayjs';
 import useRenderToast from '../../../hooks/useRenderToast';
 import { fetchMusicChartSong } from '../../../lib/apis/search';
 import Button from '../../common/Button';
+import FrameTitle from '../../common/FrameTitle';
 import IframeVideoPlayer from '../IframeVideoPlayer';
 
 import styles from './index.module.scss';
@@ -17,7 +18,9 @@ type Props = {
 function BirthSongResult({ birthDate }: Props) {
   const renderToast = useRenderToast();
 
-  const { data: findBirthSong, isSuccess } = useQuery(['musicChartSong', birthDate], () => fetchMusicChartSong({
+  const {
+    data: findBirthSong, isSuccess, isError, isFetching,
+  } = useQuery(['musicChartSong', birthDate], () => fetchMusicChartSong({
     date: dayjs(birthDate).format('YYYY-MM-DD'),
     musicChartId: 1,
   }), {
@@ -36,26 +39,42 @@ function BirthSongResult({ birthDate }: Props) {
     }
   };
 
-  if (!isSuccess) {
-    return null;
+  if (isError) {
+    return (
+      <div className={styles.resultLayoutContainer}>
+        <FrameTitle type="danger">
+          결과 불러오기 실패
+        </FrameTitle>
+      </div>
+    );
+  }
+
+  if (isFetching) {
+    return (
+      <div className={styles.resultLayoutContainer}>
+        로딩중...
+      </div>
+    );
   }
 
   return (
     <>
-      <div className={styles.resultWrapper}>
-        <div className={styles.resultContentsWrapper}>
-          <div className={styles.titleWrapper}>
-            <div>
-              {findBirthSong.artist}
-            </div>
-            <div>
-              {findBirthSong.title}
-            </div>
+      {isSuccess && (
+        <div className={styles.resultLayoutContainer}>
+          <div className={styles.resultWrapper}>
+            <FrameTitle type="default">
+              <div>
+                {findBirthSong.artist}
+              </div>
+              <div>
+                {findBirthSong.title}
+              </div>
+            </FrameTitle>
+            <IframeVideoPlayer youtubeVideoId={findBirthSong.youtube_video_id} />
           </div>
+          <Button buttonType="secondary" type="button" onClick={onClickShareLink}>결과 공유하기</Button>
         </div>
-        <IframeVideoPlayer youtubeVideoId={findBirthSong.youtube_video_id} />
-      </div>
-      <Button buttonType="secondary" type="button" onClick={onClickShareLink}>결과 공유하기</Button>
+      )}
     </>
   );
 }
