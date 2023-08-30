@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 import Toast from '../components/common/Toast';
 import Layout from '../components/Layout';
@@ -63,6 +64,16 @@ function RootLayout({ children }: {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352674467240753"
           crossOrigin="anonymous"
         /> */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-H2HKSRPVH9" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H2HKSRPVH9');
+          `}
+        </Script>
       </head>
       <body>
         <Providers>
