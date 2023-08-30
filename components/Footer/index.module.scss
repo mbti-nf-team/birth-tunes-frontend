@@ -15,7 +15,7 @@
   @include desktop {
     position: initial;
     max-width: auto;
-    margin: 0;
+    margin: 0px 0px -64px 0px;
   }
 
   .footerItem {
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     background-color: color("scale-gray-500");
-    width: 50%;
+    width: calc(100% - 11.8rem);
 
     &.left {
       border-right: 1px solid color("scale-gray-900");
@@ -55,15 +55,8 @@
 
     &.right {
       border-left: 1px solid color("scale-white");
+      padding: 8px 1rem;
+      word-break: keep-all;
     }
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translate(-100%);
   }
 }

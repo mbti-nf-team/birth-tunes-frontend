@@ -57,11 +57,12 @@ function RootLayout({ children }: {
   return (
     <html lang="ko" className={dungGeunMoFont.className}>
       <head>
-        <script
+        {/* NOTE: 구글 광고 승인 실패 */}
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352674467240753"
           crossOrigin="anonymous"
-        />
+        /> */}
       </head>
       <body>
         <Providers>
