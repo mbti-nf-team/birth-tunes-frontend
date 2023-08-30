@@ -9,18 +9,21 @@ import Providers from './providers';
 import 'styles/normalize.css';
 import 'styles/global.scss';
 
+const title = '내 생일에 1위를 한 노래 찾기';
+const description = '선택한 날에 1위한 곡 확인하기';
+
 export const metadata = {
-  title: 'Birth Tunes',
-  description: '내 생일 1위 노래 찾기',
+  title,
+  description,
   openGraph: {
-    title: 'Birth Tunes',
-    description: '내 생일 1위 노래 찾기',
+    title,
+    description,
     url: process.env.NEXT_PUBLIC_ORIGIN,
     images: ['./share-img.png'],
   },
   twitter: {
-    description: '내 생일 1위 노래 찾기',
-    title: 'Birth Tunes',
+    description,
+    title,
     images: ['./share-img.png'],
   },
 };

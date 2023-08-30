@@ -27,20 +27,18 @@ export async function generateMetadata(
   const parentMetadata = await parent;
   const previousImages = parentMetadata.openGraph?.images || [];
 
-  const description = `${dayjs(date).format('YYYY년 MM월 DD일')}에 1위를 한 노래를 확인해보세요!`;
-  const title = '내 생일에 1위를 한 노래 찾기';
-
+  const description = `${dayjs(date).format('YY년 MM월 DD일')}에 1위한 곡 확인하기`;
   return {
-    title,
+    title: metadata.title,
     description,
     openGraph: {
-      title,
+      title: metadata.title,
       images: previousImages,
       description,
       url: `${process.env.NEXT_PUBLIC_ORIGIN}?date=${date}`,
     },
     twitter: {
-      title,
+      title: metadata.title,
       description,
     },
   };
