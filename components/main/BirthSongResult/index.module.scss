@@ -7,6 +7,10 @@
   gap: 1.25rem;
   min-height: 25rem;
 
+  &.hidden {
+    display: none;
+  }
+
   .resultWrapper {
     width: 100%;
     display: flex;

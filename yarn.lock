@@ -368,16 +368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.9.2":
-  version: 7.20.13
-  resolution: "@babel/runtime@npm:7.20.13"
-  dependencies:
-    regenerator-runtime: ^0.13.11
-  checksum: 09b7a97a05c80540db6c9e4ddf8c5d2ebb06cae5caf3a87e33c33f27f8c4d49d9c67a2d72f1570e796045288fad569f98a26ceba0c4f5fad2af84b6ad855c4fb
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.22.10":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.22.10, @babel/runtime@npm:^7.9.2":
   version: 7.22.11
   resolution: "@babel/runtime@npm:7.22.11"
   dependencies:
@@ -998,13 +989,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nf-team/react@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@nf-team/react@npm:2.0.1"
+"@nf-team/react@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@nf-team/react@npm:2.1.0"
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: fcab32c88fa733b1304cf2c1350136eee381ae9c9019eaa42b1a364dc2a275abf443e61d5bd140b2acddd1b25f9f3b3f9109b94aeb839d82919d6b0028da090a
+  checksum: c8e13c58dac43d64bcebab04198f68fe3afaa33eefdf397b65f3b37e2ef377965ac096756070099f30e805ea30a4c2db8f2736242d7746f6bd18c780dbe3085f
   languageName: node
   linkType: hard
 
@@ -6789,13 +6780,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.11":
-  version: 0.13.11
-  resolution: "regenerator-runtime@npm:0.13.11"
-  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
-  languageName: node
-  linkType: hard
-
 "regenerator-runtime@npm:^0.14.0":
   version: 0.14.0
   resolution: "regenerator-runtime@npm:0.14.0"
@@ -7849,7 +7833,7 @@ __metadata:
     "@next/eslint-plugin-next": ^13.4.1
     "@nf-team/core": ^2.0.1
     "@nf-team/eslint-config": ^2.0.2
-    "@nf-team/react": ^2.0.1
+    "@nf-team/react": ^2.1.0
     "@tanem/react-nprogress": ^5.0.48
     "@tanstack/react-query": ^4.33.0
     "@tanstack/react-query-devtools": ^4.33.0
