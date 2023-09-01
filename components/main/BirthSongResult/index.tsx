@@ -3,6 +3,7 @@
 import { removeNullable } from '@nf-team/core';
 import { DelayRenderComponent } from '@nf-team/react';
 import { useQuery } from '@tanstack/react-query';
+import clsx from 'clsx';
 import dayjs from 'dayjs';
 
 import useRenderToast from '../../../hooks/useRenderToast';
@@ -53,13 +54,9 @@ function BirthSongResult({ birthDate }: Props) {
   }
 
   return (
-    <>
-      <DelayRenderComponent isVisible={isFetching}>
-        <div className={styles.resultLayoutContainer}>
-          <ProgressBar isAnimating={isFetching} />
-        </div>
-      </DelayRenderComponent>
-      {isSuccess && (
+    <div className={clsx(styles.resultLayoutContainer, !isFetching && !isSuccess && styles.hidden)}>
+      <ProgressBar isAnimating={isFetching} />
+      <DelayRenderComponent isVisible={isSuccess} renderDelay={400} unRenderDelay={0}>
         <div className={styles.resultLayoutContainer}>
           <div className={styles.resultWrapper}>
             <FrameTitle type="default">
@@ -74,8 +71,8 @@ function BirthSongResult({ birthDate }: Props) {
           </div>
           <Button buttonType="secondary" type="button" onClick={onClickShareLink}>결과 공유하기</Button>
         </div>
-      )}
-    </>
+      </DelayRenderComponent>
+    </div>
   );
 }
 

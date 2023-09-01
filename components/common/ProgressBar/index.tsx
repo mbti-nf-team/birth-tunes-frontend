@@ -6,10 +6,8 @@ import styles from './index.module.scss';
 const progressVariants: Variants = {
   none: {
     opacity: 0,
-    transitionEnd: {
-      visibility: 'hidden',
-      display: 'none',
-    },
+    visibility: 'hidden',
+    display: 'none',
   },
   visible: {
     opacity: 1,

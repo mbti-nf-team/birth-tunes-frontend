@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:13.4.1"],\
             ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
             ["@tanem/react-nprogress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:5.0.48"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
             ["@tanstack/react-query-devtools", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
@@ -817,14 +817,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@babel/runtime", [\
-        ["npm:7.20.13", {\
-          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.20.13-45eeb6d8ad-09b7a97a05.zip/node_modules/@babel/runtime/",\
-          "packageDependencies": [\
-            ["@babel/runtime", "npm:7.20.13"],\
-            ["regenerator-runtime", "npm:0.13.11"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:7.22.11", {\
           "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.22.11-88b2589067-a5cd6683a8.zip/node_modules/@babel/runtime/",\
           "packageDependencies": [\
@@ -1575,17 +1567,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@nf-team/react", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.0.1-c77dbc2e70-fcab32c88f.zip/node_modules/@nf-team/react/",\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.1.0-7bcc070b13-c8e13c58da.zip/node_modules/@nf-team/react/",\
           "packageDependencies": [\
-            ["@nf-team/react", "npm:2.0.1"]\
+            ["@nf-team/react", "npm:2.1.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1", {\
-          "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-913d9588bb/0/cache/@nf-team-react-npm-2.0.1-c77dbc2e70-fcab32c88f.zip/node_modules/@nf-team/react/",\
+        ["virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-cc285dd3e0/0/cache/@nf-team-react-npm-2.1.0-7bcc070b13-c8e13c58da.zip/node_modules/@nf-team/react/",\
           "packageDependencies": [\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["react", "npm:18.2.0"],\
@@ -1838,7 +1830,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@testing-library/dom", "npm:9.2.0"],\
             ["@babel/code-frame", "npm:7.18.6"],\
-            ["@babel/runtime", "npm:7.20.13"],\
+            ["@babel/runtime", "npm:7.22.11"],\
             ["@types/aria-query", "npm:5.0.1"],\
             ["aria-query", "npm:5.1.3"],\
             ["chalk", "npm:4.1.2"],\
@@ -1862,7 +1854,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@testing-library/jest-dom", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:6.0.0"],\
             ["@adobe/css-tools", "npm:4.0.1"],\
-            ["@babel/runtime", "npm:7.20.13"],\
+            ["@babel/runtime", "npm:7.22.11"],\
             ["@jest/globals", null],\
             ["@types/jest", "npm:29.5.3"],\
             ["@types/jest__globals", null],\
@@ -1899,7 +1891,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@testing-library-react-virtual-0d0fe96ba6/0/cache/@testing-library-react-npm-14.0.0-84fecd033b-4a54c8f56c.zip/node_modules/@testing-library/react/",\
           "packageDependencies": [\
             ["@testing-library/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:14.0.0"],\
-            ["@babel/runtime", "npm:7.20.13"],\
+            ["@babel/runtime", "npm:7.22.11"],\
             ["@testing-library/dom", "npm:9.2.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
@@ -4790,7 +4782,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/eslint-plugin-jsx-a11y-virtual-d19ff09f43/0/cache/eslint-plugin-jsx-a11y-npm-6.7.1-84f912ba17-f166dd5fe7.zip/node_modules/eslint-plugin-jsx-a11y/",\
           "packageDependencies": [\
             ["eslint-plugin-jsx-a11y", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:6.7.1"],\
-            ["@babel/runtime", "npm:7.20.13"],\
+            ["@babel/runtime", "npm:7.22.11"],\
             ["@types/eslint", null],\
             ["aria-query", "npm:5.1.3"],\
             ["array-includes", "npm:3.1.6"],\
@@ -8642,13 +8634,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["regenerator-runtime", [\
-        ["npm:0.13.11", {\
-          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.11-90bf536060-27481628d2.zip/node_modules/regenerator-runtime/",\
-          "packageDependencies": [\
-            ["regenerator-runtime", "npm:0.13.11"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.14.0", {\
           "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.14.0-e060897cf7-1c977ad82a.zip/node_modules/regenerator-runtime/",\
           "packageDependencies": [\
@@ -9822,7 +9807,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:13.4.1"],\
             ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.1"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
             ["@tanem/react-nprogress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:5.0.48"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
             ["@tanstack/react-query-devtools", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
