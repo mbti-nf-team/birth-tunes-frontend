@@ -1,0 +1,31 @@
+@import "/styles/main.scss";
+
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  pointer-events: none;
+
+  .progressText {
+    @include text("Body", "scale-gray-400");
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .progressBarWrapper {
+    display: flex;
+    height: 4rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid color("scale-gray-400");
+
+    .progressBar {
+      width: 100%;
+      background-color: color("scale-ivory");
+    }
+  }
+}

@@ -1,5 +1,7 @@
 'use client';
 
+import { removeNullable } from '@nf-team/core';
+import { DelayRenderComponent } from '@nf-team/react';
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 
@@ -7,6 +9,7 @@ import useRenderToast from '../../../hooks/useRenderToast';
 import { fetchMusicChartSong } from '../../../lib/apis/search';
 import Button from '../../common/Button';
 import FrameTitle from '../../common/FrameTitle';
+import ProgressBar from '../../common/ProgressBar';
 import IframeVideoPlayer from '../IframeVideoPlayer';
 
 import styles from './index.module.scss';
@@ -49,28 +52,25 @@ function BirthSongResult({ birthDate }: Props) {
     );
   }
 
-  if (isFetching) {
-    return (
-      <div className={styles.resultLayoutContainer}>
-        로딩중...
-      </div>
-    );
-  }
-
   return (
     <>
+      <DelayRenderComponent isVisible={isFetching}>
+        <div className={styles.resultLayoutContainer}>
+          <ProgressBar isAnimating={isFetching} />
+        </div>
+      </DelayRenderComponent>
       {isSuccess && (
         <div className={styles.resultLayoutContainer}>
           <div className={styles.resultWrapper}>
             <FrameTitle type="default">
               <div>
-                {findBirthSong.artist}
+                {findBirthSong?.artist}
               </div>
               <div>
-                {findBirthSong.title}
+                {findBirthSong?.title}
               </div>
             </FrameTitle>
-            <IframeVideoPlayer youtubeVideoId={findBirthSong.youtube_video_id} />
+            <IframeVideoPlayer youtubeVideoId={removeNullable(findBirthSong?.youtube_video_id)} />
           </div>
           <Button buttonType="secondary" type="button" onClick={onClickShareLink}>결과 공유하기</Button>
         </div>

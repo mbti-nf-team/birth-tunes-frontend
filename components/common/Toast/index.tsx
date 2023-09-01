@@ -11,7 +11,7 @@ import useToastStore, { ToastStore } from '../../../stores/toast';
 
 import styles from './index.module.scss';
 
-const logoVariants: Variants = {
+const toastVariants: Variants = {
   none: {
     opacity: 0,
     transform: 'translateY(100%)',
@@ -76,7 +76,7 @@ function Toast() {
     <motion.div
       animate={isOpenToast ? 'visible' : 'none'}
       initial="none"
-      variants={logoVariants}
+      variants={toastVariants}
       className={styles.toastContainer}
       onAnimationComplete={handleAnimationComplete}
     >
