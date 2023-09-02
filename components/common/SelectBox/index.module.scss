@@ -5,6 +5,7 @@
   position: relative;
 
   .iconWrapper {
+    display:flex;
     position: absolute;
     top: 14px;
     right: 18px;
@@ -12,6 +13,10 @@
     .icon {
       transition: 0.3s;
     }
+  }
+
+  .selectWrapper:disabled + .iconWrapper .icon {
+    cursor: not-allowed;
   }
 
   .selectWrapper:focus + .iconWrapper .icon {
@@ -68,6 +73,7 @@
     }
 
     &:not(:disabled):not(.disabled) {
+      cursor: pointer;
       border-top-color: color("scale-white");
       border-left-color: color("scale-white");
 
