@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef } from 'react';
+import ReactGA from 'react-ga4';
 
 import { removeNullable } from '@nf-team/core';
 import { DelayRenderComponent } from '@nf-team/react';
@@ -10,6 +11,8 @@ import dayjs from 'dayjs';
 
 import useRenderToast from '../../../hooks/useRenderToast';
 import { fetchMusicChartSong } from '../../../lib/apis/search';
+import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from '../../../lib/constants/ga4';
+import { FindSong } from '../../../lib/types/song';
 import Button from '../../common/Button';
 import FrameTitle from '../../common/FrameTitle';
 import ProgressBar from '../../common/ProgressBar';
@@ -26,8 +29,8 @@ function BirthSongResult({ birthDate }: Props) {
   const resultContainerRef = useRef<HTMLDivElement>(null);
 
   const {
-    data: findBirthSong, isSuccess, isError, isFetching,
-  } = useQuery(['musicChartSong', birthDate], () => fetchMusicChartSong({
+    data: findBirthSong, isSuccess, isError, isFetching, error: errorFindBirthSong,
+  } = useQuery<FindSong, any>(['birthSong', birthDate], () => fetchMusicChartSong({
     date: dayjs(birthDate).format('YYYY-MM-DD'),
     musicChartId: 1,
   }), {
@@ -40,11 +43,27 @@ function BirthSongResult({ birthDate }: Props) {
 
   const onClickShareLink = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_ORIGIN}?date=${birthDate}`);
+      const shareUrl = `${process.env.NEXT_PUBLIC_ORIGIN}?date=${birthDate}`;
+
+      await navigator.clipboard.writeText(shareUrl);
 
       renderToast({ description: 'URL을 복사했습니다.', type: 'success' });
+
+      ReactGA.event(GA4_EVENT_NAME.share_link_success_clicked, {
+        action: GA4_EVENT_ACTION.click,
+        type: GA4_EVENT_TYPE.success,
+        url: shareUrl,
+        date: birthDate,
+      });
     } catch (error) {
       renderToast({ description: 'URL 복사에 실패했습니다.', type: 'error' });
+
+      ReactGA.event(GA4_EVENT_NAME.share_link_failed_clicked, {
+        action: GA4_EVENT_ACTION.click,
+        type: GA4_EVENT_TYPE.error,
+        error,
+        date: birthDate,
+      });
     }
   }, [birthDate]);
 
@@ -53,6 +72,19 @@ function BirthSongResult({ birthDate }: Props) {
       resultContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [isEmptyResult, birthDate]);
+
+  useEffect(() => {
+    if (isError) {
+      ReactGA.event(GA4_EVENT_NAME.result_song_load_failed, {
+        action: GA4_EVENT_ACTION.fail,
+        type: GA4_EVENT_TYPE.error,
+        errorCode: errorFindBirthSong?.code,
+        errorMessage: errorFindBirthSong?.message,
+      });
+    }
+  }, [isError, errorFindBirthSong]);
+
+  console.log(errorFindBirthSong);
 
   return (
     <div

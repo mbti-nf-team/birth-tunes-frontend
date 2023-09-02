@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import {
-  ButtonHTMLAttributes, HTMLProps, PropsWithChildren, ReactElement,
+  ButtonHTMLAttributes, HTMLProps, memo, PropsWithChildren, ReactElement,
 } from 'react';
 
 import Link from 'next/link';
@@ -64,4 +64,4 @@ function Button({
   );
 }
 
-export default Button;
+export default memo(Button);
