@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -8,6 +10,14 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
     esmExternals: 'loose',
+  },
+  compiler: {
+    reactRemoveProperties: isProd && {
+      properties: ['^data-test'],
+    },
+    removeConsole: isProd && {
+      exclude: ['error'],
+    },
   },
 };
 

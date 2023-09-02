@@ -84,8 +84,6 @@ function BirthSongResult({ birthDate }: Props) {
     }
   }, [isError, errorFindBirthSong]);
 
-  console.log(errorFindBirthSong);
-
   return (
     <div
       className={clsx(
