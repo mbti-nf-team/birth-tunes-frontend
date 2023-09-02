@@ -1,5 +1,7 @@
 'use client';
 
+import { useCallback, useEffect, useRef } from 'react';
+
 import { removeNullable } from '@nf-team/core';
 import { DelayRenderComponent } from '@nf-team/react';
 import { useQuery } from '@tanstack/react-query';
@@ -21,6 +23,7 @@ type Props = {
 
 function BirthSongResult({ birthDate }: Props) {
   const renderToast = useRenderToast();
+  const resultContainerRef = useRef<HTMLDivElement>(null);
 
   const {
     data: findBirthSong, isSuccess, isError, isFetching,
@@ -33,7 +36,9 @@ function BirthSongResult({ birthDate }: Props) {
     staleTime: Infinity,
   });
 
-  const onClickShareLink = async () => {
+  const isEmptyResult = !isFetching && !isSuccess && !isError;
+
+  const onClickShareLink = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_ORIGIN}?date=${birthDate}`);
 
@@ -41,21 +46,28 @@ function BirthSongResult({ birthDate }: Props) {
     } catch (error) {
       renderToast({ description: 'URL 복사에 실패했습니다.', type: 'error' });
     }
-  };
+  }, [birthDate]);
 
-  if (isError) {
-    return (
-      <div className={styles.resultLayoutContainer}>
+  useEffect(() => {
+    if (!isEmptyResult && resultContainerRef?.current) {
+      resultContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [isEmptyResult, birthDate]);
+
+  return (
+    <div
+      className={clsx(
+        styles.resultLayoutContainer,
+        isEmptyResult && styles.hidden,
+      )}
+      ref={resultContainerRef}
+    >
+      <ProgressBar isAnimating={isFetching} />
+      <DelayRenderComponent isVisible={isError} renderDelay={400} unRenderDelay={0}>
         <FrameTitle type="danger">
           결과 불러오기 실패
         </FrameTitle>
-      </div>
-    );
-  }
-
-  return (
-    <div className={clsx(styles.resultLayoutContainer, !isFetching && !isSuccess && styles.hidden)}>
-      <ProgressBar isAnimating={isFetching} />
+      </DelayRenderComponent>
       <DelayRenderComponent isVisible={isSuccess} renderDelay={400} unRenderDelay={0}>
         <div className={styles.resultLayoutContainer}>
           <div className={styles.resultWrapper}>
