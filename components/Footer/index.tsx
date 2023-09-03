@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './index.module.scss';
 
 function Footer() {
-  const description = 'Special Thanks To 가요톱10, MC 손범수, 생방송 뮤직뱅크, Melon';
+  const description = 'Special Thanks To 가요톱10, MC 손범수, SBS 인기가요, Melon';
 
   return (
     <footer className={styles.footerWrapper}>
