@@ -28,11 +28,14 @@ function BirthSongResult({ birthDate }: Props) {
   const renderToast = useRenderToast();
   const resultContainerRef = useRef<HTMLDivElement>(null);
 
+  const date = dayjs(birthDate);
+
   const {
     data: findBirthSong, isSuccess, isError, isFetching, error: errorFindBirthSong,
   } = useQuery<FindSong, any>(['birthSong', birthDate], () => fetchMusicChartSong({
-    date: dayjs(birthDate).format('YYYY-MM-DD'),
-    musicChartId: 1,
+    day: date.date(),
+    month: date.month() + 1,
+    year: date.year(),
   }), {
     enabled: !!birthDate,
     cacheTime: Infinity,

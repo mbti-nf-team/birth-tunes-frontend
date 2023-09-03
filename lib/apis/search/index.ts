@@ -4,14 +4,11 @@ import { FindSongResponse } from './model';
 
 // eslint-disable-next-line import/prefer-default-export
 export const fetchMusicChartSong = async ({
-  date, musicChartId,
-}: { date: string; musicChartId: number; }) => {
+  year, month, day,
+}: { year: number; month: number; day: number; }) => {
   const response = await api<FindSongResponse>({
     method: 'GET',
-    url: `/music-charts/${musicChartId}/song`,
-    params: {
-      date,
-    },
+    url: `/songs/${year}/${month}/${day}`,
     paramsSerializer,
   });
 

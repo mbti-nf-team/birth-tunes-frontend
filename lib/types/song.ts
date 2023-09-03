@@ -4,5 +4,8 @@ export interface FindSong {
   artist: string;
   base_date: string;
   youtube_video_id: string;
-  music_chart_id: number;
+  music_chart: {
+    id: number;
+    name: string;
+  };
 }
