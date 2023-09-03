@@ -9,13 +9,14 @@ import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
 
-import useRenderToast from '../../../hooks/useRenderToast';
-import { fetchMusicChartSong } from '../../../lib/apis/search';
-import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from '../../../lib/constants/ga4';
-import { FindSong } from '../../../lib/types/song';
-import Button from '../../common/Button';
-import FrameTitle from '../../common/FrameTitle';
-import ProgressBar from '../../common/ProgressBar';
+import Button from 'components/common/Button';
+import FrameTitle from 'components/common/FrameTitle';
+import ProgressBar from 'components/common/ProgressBar';
+import useRenderToast from 'hooks/useRenderToast';
+import { fetchMusicChartSong } from 'lib/apis/search';
+import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from 'lib/constants/ga4';
+import { FindSong } from 'lib/types/song';
+
 import IframeVideoPlayer from '../IframeVideoPlayer';
 
 import styles from './index.module.scss';

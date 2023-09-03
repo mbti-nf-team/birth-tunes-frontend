@@ -3,8 +3,8 @@ import { Metadata, ResolvingMetadata } from 'next';
 import { removeNullable } from '@nf-team/core';
 import dayjs from 'dayjs';
 
-import Footer from '../components/Footer';
-import BirthSongContainer from '../components/main/BirthSongContainer';
+import Footer from 'components/Footer';
+import BirthSongContainer from 'components/main/BirthSongContainer';
 
 import { metadata } from './layout';
 

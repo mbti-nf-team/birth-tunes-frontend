@@ -5,7 +5,7 @@ import {
 import { checkNumber, generateArrayOfNumber } from '@nf-team/core';
 import dayjs from 'dayjs';
 
-import SelectBox from '../../common/SelectBox';
+import SelectBox from 'components/common/SelectBox';
 
 import styles from './index.module.scss';
 

@@ -7,7 +7,7 @@ import {
 import clsx from 'clsx';
 import { AnimationDefinition, motion, Variants } from 'framer-motion';
 
-import useToastStore, { ToastStore } from '../../../stores/toast';
+import useToastStore, { ToastStore } from 'stores/toast';
 
 import styles from './index.module.scss';
 

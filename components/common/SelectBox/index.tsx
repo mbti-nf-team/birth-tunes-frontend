@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import clsx from 'clsx';
 
-import chevronIcon from '../../../lib/assets/chevron.svg';
+import chevronIcon from 'lib/assets/chevron.svg';
 
 import styles from './index.module.scss';
 

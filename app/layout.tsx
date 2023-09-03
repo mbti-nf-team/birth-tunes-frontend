@@ -3,8 +3,8 @@ import ReactGA from 'react-ga4';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 
-import Toast from '../components/common/Toast';
-import Layout from '../components/Layout';
+import Toast from 'components/common/Toast';
+import Layout from 'components/Layout';
 
 import Providers from './providers';
 

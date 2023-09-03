@@ -3,7 +3,8 @@
 import { useCallback, useState } from 'react';
 import ReactGA from 'react-ga4';
 
-import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from '../../../lib/constants/ga4';
+import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from 'lib/constants/ga4';
+
 import BirthSongForm from '../BirthSongForm';
 import BirthSongResult from '../BirthSongResult';
 

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import useToastStore from '../stores/toast';
+import useToastStore from 'stores/toast';
 
 function useRenderToast() {
   const { renderToast } = useToastStore((state) => ({
