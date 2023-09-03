@@ -66,11 +66,11 @@ function RootLayout({ children }: {
     <html lang="ko" className={dungGeunMoFont.className}>
       <head>
         {/* NOTE: 구글 광고 승인 실패 */}
-        {/* <script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352674467240753"
           crossOrigin="anonymous"
-        /> */}
+        />
         <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
         <Script id="google-analytics">
           {`
