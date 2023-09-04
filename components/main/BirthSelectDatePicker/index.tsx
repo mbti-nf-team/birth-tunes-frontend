@@ -36,7 +36,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
       days: setDays,
     };
 
-    changeBirth[type]((e.target.value));
+    changeBirth[type](e.target.value);
   };
 
   useEffect(() => {
@@ -78,7 +78,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
       </SelectBox>
       <SelectBox id="month" emptyOption="월" value={month} onChange={handleChange('month')}>
         {generateArrayOfNumber(MONTH_RANGE).map((number) => {
-          const targetMonth = MONTH_RANGE - number;
+          const targetMonth = number + 1;
 
           return (
             <option key={targetMonth} value={targetMonth}>{targetMonth}</option>
