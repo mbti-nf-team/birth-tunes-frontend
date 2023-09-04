@@ -3,6 +3,7 @@ import {
 } from 'react';
 
 import { checkNumber, generateArrayOfNumber } from '@nf-team/core';
+import { useUpdateEffect } from '@nf-team/react';
 import dayjs from 'dayjs';
 
 import SelectBox from 'components/common/SelectBox';
@@ -40,17 +41,17 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
     changeBirth[type](e.target.value);
   }, []);
 
-  useEffect(() => {
-    if (year) {
-      const isCurrentYear = dayjs().year() === dayjs(year).year();
-
-      setMonthRange(isCurrentYear ? dayjs().month() : MONTH_RANGE);
-      setMonth('');
-      setDays('');
+  useUpdateEffect(() => {
+    if (year && dayjs().year() === dayjs(year).year()) {
+      setMonthRange(dayjs().month());
+      setMonth((prevMonth) => (Number(prevMonth) > dayjs().month() ? '' : prevMonth));
+      return;
     }
+
+    setMonthRange(MONTH_RANGE);
   }, [year]);
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     if (year && month) {
       const targetDays = dayjs(`${year}-${month}`).daysInMonth();
 
@@ -58,7 +59,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
     }
   }, [month, year]);
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     const birthDate = `${year}-${month}-${days}`;
 
     if (year && month && days && dayjs(birthDate).isValid()) {

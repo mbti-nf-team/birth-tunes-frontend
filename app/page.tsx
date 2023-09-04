@@ -45,13 +45,18 @@ export async function generateMetadata(
 }
 
 function Home({ searchParams }: Props) {
+  const defaultBirthDate = removeNullable(searchParams?.date);
+
+  const isNotValidDefaultDate = defaultBirthDate
+    && (!dayjs(defaultBirthDate).isValid() || dayjs().isBefore(dayjs(defaultBirthDate)));
+
   return (
     <>
       <main className={styles.mainWrapper}>
         <h1 className={styles.title}>
           {'+-------------------+\n¦      내 생일      ¦\n¦   1위 노래 찾기   ¦\n+-------------------+'}
         </h1>
-        <BirthSongContainer defaultBirthDate={removeNullable(searchParams?.date)} />
+        <BirthSongContainer defaultBirthDate={isNotValidDefaultDate ? '' : defaultBirthDate} />
       </main>
       <Footer />
     </>

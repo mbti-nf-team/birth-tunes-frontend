@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:13.4.19"],\
             ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.2.0"],\
             ["@tanem/react-nprogress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:5.0.48"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
             ["@tanstack/react-query-devtools", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
@@ -1568,17 +1568,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@nf-team/react", [\
-        ["npm:2.1.0", {\
-          "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.1.0-7bcc070b13-c8e13c58da.zip/node_modules/@nf-team/react/",\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.2.0-1088d4c5cd-6e9c405200.zip/node_modules/@nf-team/react/",\
           "packageDependencies": [\
-            ["@nf-team/react", "npm:2.1.0"]\
+            ["@nf-team/react", "npm:2.2.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-cc285dd3e0/0/cache/@nf-team-react-npm-2.1.0-7bcc070b13-c8e13c58da.zip/node_modules/@nf-team/react/",\
+        ["virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-3c02d37411/0/cache/@nf-team-react-npm-2.2.0-1088d4c5cd-6e9c405200.zip/node_modules/@nf-team/react/",\
           "packageDependencies": [\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.2.0"],\
             ["@types/react", "npm:18.2.20"],\
             ["@types/react-dom", "npm:18.2.7"],\
             ["react", "npm:18.2.0"],\
@@ -9819,7 +9819,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:13.4.19"],\
             ["@nf-team/core", "npm:2.0.1"],\
             ["@nf-team/eslint-config", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.0.2"],\
-            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.1.0"],\
+            ["@nf-team/react", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.2.0"],\
             ["@tanem/react-nprogress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:5.0.48"],\
             ["@tanstack/react-query", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\
             ["@tanstack/react-query-devtools", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:4.33.0"],\

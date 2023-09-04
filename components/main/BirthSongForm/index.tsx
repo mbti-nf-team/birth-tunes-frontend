@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 
+import dayjs from 'dayjs';
+
 import Button from 'components/common/Button';
 
 import BirthSelectDatePicker from '../BirthSelectDatePicker';
@@ -16,10 +18,12 @@ function BirthSongForm({ onSubmit, defaultBirthDate }: Props) {
 
   const onBirthChange = useCallback((date: string) => setBirthDate(date), []);
 
+  const disabled = !birthDate || !dayjs(birthDate).isValid() || dayjs().isBefore(dayjs(birthDate));
+
   return (
     <div className={styles.formWrapper}>
       <BirthSelectDatePicker defaultBirthDate={defaultBirthDate} onBirthChange={onBirthChange} />
-      <Button buttonType="primary" onClick={() => onSubmit(birthDate)} disabled={!birthDate}>
+      <Button buttonType="primary" onClick={() => onSubmit(birthDate)} disabled={disabled}>
         계속하려면 누르세요
       </Button>
     </div>
