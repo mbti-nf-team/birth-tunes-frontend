@@ -1,5 +1,5 @@
 import {
-  ChangeEvent, Dispatch, SetStateAction, useEffect, useMemo, useState,
+  ChangeEvent, Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState,
 } from 'react';
 
 import { checkNumber, generateArrayOfNumber } from '@nf-team/core';
@@ -23,13 +23,14 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
   const [month, setMonth] = useState<string>('');
   const [days, setDays] = useState<string>('');
   const [daysRange, setDaysRange] = useState<number>(0);
+  const [monthRange, setMonthRange] = useState<number>(MONTH_RANGE);
 
   const { nowYear, yearRange } = useMemo(() => ({
     yearRange: dayjs(Date.now()).diff('1981-01-01', 'years') + 1,
     nowYear: dayjs(Date.now()).year(),
   }), []);
 
-  const handleChange = (type: DateType) => (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = useCallback((type: DateType) => (e: ChangeEvent<HTMLSelectElement>) => {
     const changeBirth: Record<DateType, Dispatch<SetStateAction<string>>> = {
       year: setYear,
       month: setMonth,
@@ -37,7 +38,17 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
     };
 
     changeBirth[type](e.target.value);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (year) {
+      const isCurrentYear = dayjs().year() === dayjs(year).year();
+
+      setMonthRange(isCurrentYear ? dayjs().month() : MONTH_RANGE);
+      setMonth('');
+      setDays('');
+    }
+  }, [year]);
 
   useEffect(() => {
     if (year && month) {
@@ -77,7 +88,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
         })}
       </SelectBox>
       <SelectBox id="month" emptyOption="월" value={month} onChange={handleChange('month')}>
-        {generateArrayOfNumber(MONTH_RANGE).map((number) => {
+        {generateArrayOfNumber(monthRange).map((number) => {
           const targetMonth = number + 1;
 
           return (

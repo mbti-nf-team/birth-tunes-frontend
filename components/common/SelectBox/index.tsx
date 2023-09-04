@@ -1,4 +1,6 @@
-import { DetailedHTMLProps, PropsWithChildren, SelectHTMLAttributes } from 'react';
+import {
+  DetailedHTMLProps, memo, PropsWithChildren, SelectHTMLAttributes,
+} from 'react';
 
 import Image from 'next/image';
 
@@ -44,4 +46,4 @@ function SelectBox({
   );
 }
 
-export default SelectBox;
+export default memo(SelectBox);
