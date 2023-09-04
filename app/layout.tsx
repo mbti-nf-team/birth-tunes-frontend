@@ -57,7 +57,9 @@ const dungGeunMoFont = localFont({
   ],
 });
 
-ReactGA.initialize(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID);
+ReactGA.initialize(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+  testMode: process.env.NODE_ENV === 'development',
+});
 
 function RootLayout({ children }: {
   children: React.ReactNode
@@ -66,29 +68,33 @@ function RootLayout({ children }: {
     <html lang="ko" className={dungGeunMoFont.className}>
       <head>
         {/* NOTE: 구글 광고 승인 실패 */}
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5352674467240753"
           crossOrigin="anonymous"
-        />
-        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
-        <Script id="google-analytics">
-          {`
+        /> */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
+            <Script id="google-analytics">
+              {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
-        </Script>
-        <Script id="google-tag-manager">
-          {`
+            </Script>
+            <Script id="google-tag-manager">
+              {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}');
           `}
-        </Script>
+            </Script>
+          </>
+        )}
       </head>
       <body>
         <Providers>

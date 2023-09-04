@@ -56,9 +56,9 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
   }, [year, month, days]);
 
   useEffect(() => {
-    if (defaultBirthDate) {
-      const birthDate = dayjs(defaultBirthDate);
+    const birthDate = dayjs(defaultBirthDate);
 
+    if (birthDate && birthDate.isValid()) {
       setYear(birthDate.year().toString());
       setMonth((birthDate.month() + 1).toString());
       setDays(birthDate.date().toString());

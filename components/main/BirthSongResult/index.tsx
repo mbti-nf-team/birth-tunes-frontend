@@ -38,7 +38,7 @@ function BirthSongResult({ birthDate }: Props) {
     month: date.month() + 1,
     year: date.year(),
   }), {
-    enabled: !!birthDate,
+    enabled: !!date && date.isValid(),
     cacheTime: Infinity,
     staleTime: Infinity,
   });
