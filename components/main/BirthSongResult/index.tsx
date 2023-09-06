@@ -13,7 +13,7 @@ import Button from 'components/common/Button';
 import FrameTitle from 'components/common/FrameTitle';
 import ProgressBar from 'components/common/ProgressBar';
 import useRenderToast from 'hooks/useRenderToast';
-import { fetchMusicChartSong } from 'lib/apis/search';
+import { fetchSongResult } from 'lib/apis/search';
 import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from 'lib/constants/ga4';
 import { FindSong } from 'lib/types/song';
 
@@ -33,10 +33,10 @@ function BirthSongResult({ birthDate }: Props) {
 
   const {
     data: findBirthSong, isSuccess, isError, isFetching, error: errorFindBirthSong,
-  } = useQuery<FindSong, any>(['birthSong', birthDate], () => fetchMusicChartSong({
-    day: date.date(),
-    month: date.month() + 1,
+  } = useQuery<FindSong, any>(['birthSong', birthDate], () => fetchSongResult({
     year: date.year(),
+    month: date.month() + 1,
+    day: date.date(),
   }), {
     enabled: !!date && date.isValid(),
     cacheTime: Infinity,

@@ -3,13 +3,15 @@ import { api, paramsSerializer } from '..';
 import { FindSongResponse } from './model';
 
 // eslint-disable-next-line import/prefer-default-export
-export const fetchMusicChartSong = async ({
-  year, month, day,
-}: { year: number; month: number; day: number; }) => {
+export const fetchSongResult = async (params: {
+  year: number; month: number; day: number;
+}) => {
   const response = await api<FindSongResponse>({
     method: 'GET',
-    url: `/songs/${year}/${month}/${day}`,
+    url: '/song',
     paramsSerializer,
+    params,
+    isBFF: true,
   });
 
   return response;
