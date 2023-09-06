@@ -24,7 +24,15 @@ export async function GET(request: NextRequest) {
   if (response.ok) {
     const searchResult = await response.json();
 
-    return NextResponse.json(searchResult, response);
+    return NextResponse.json(searchResult, {
+      ...response,
+      headers: {
+        ...response.headers,
+        'Cache-Control': 'public, s-maxage=1',
+        'CDN-Cache-Control': 'public, s-maxage=60',
+        'Vercel-CDN-Cache-Control': 'public, s-maxage=3600',
+      },
+    });
   }
 
   return NextResponse.json(null, response);
