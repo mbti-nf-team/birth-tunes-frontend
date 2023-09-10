@@ -989,13 +989,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nf-team/react@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@nf-team/react@npm:2.2.0"
+"@nf-team/react@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@nf-team/react@npm:2.3.0"
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: 6e9c4052007d209392a7867fa8b511a99c37629a0fc2bfcf04f6b682f12cf87abee5901bbe5f8cbd560db590ec2cdd8193894a6a10c6493ecf2717c82c2202af
+  checksum: 74c007886662907bb7c86ffc52582080d975d2156d854b5a0cb8acfa9180ef1ed7d605752264727631959d10d781af5524daf3e91c5ed57553db393d0f37f9c5
   languageName: node
   linkType: hard
 
@@ -7842,7 +7842,7 @@ __metadata:
     "@next/eslint-plugin-next": ^13.4.19
     "@nf-team/core": ^2.0.1
     "@nf-team/eslint-config": ^2.0.2
-    "@nf-team/react": ^2.2.0
+    "@nf-team/react": ^2.3.0
     "@tanem/react-nprogress": ^5.0.48
     "@tanstack/react-query": ^4.33.0
     "@tanstack/react-query-devtools": ^4.33.0
