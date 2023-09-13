@@ -50,6 +50,14 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.ts', '.js', '.tsx', '.json'],
+      },
+    },
+  },
   rules: {
     'react/require-default-props': 'off',
     'import/order': 'off',

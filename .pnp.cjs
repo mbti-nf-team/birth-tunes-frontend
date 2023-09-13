@@ -52,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cypress", "npm:12.1.0"],\
             ["dayjs", "npm:1.11.9"],\
             ["eslint", "npm:8.47.0"],\
+            ["eslint-import-resolver-alias", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:1.1.2"],\
             ["eslint-plugin-cypress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.12.1"],\
             ["eslint-plugin-import", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.28.0"],\
             ["eslint-plugin-jest", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:27.2.3"],\
@@ -1537,7 +1538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.47.0"],\
             ["eslint-config-airbnb", "virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:19.0.4"],\
             ["eslint-config-airbnb-typescript", "virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:17.0.0"],\
-            ["eslint-import-resolver-alias", "virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:1.1.2"],\
+            ["eslint-import-resolver-alias", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:1.1.2"],\
             ["eslint-import-resolver-typescript", "virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:3.6.0"],\
             ["eslint-plugin-import", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.28.0"],\
             ["eslint-plugin-jsx-a11y", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:6.7.1"],\
@@ -4545,10 +4546,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:1.1.2", {\
-          "packageLocation": "./.yarn/__virtual__/eslint-import-resolver-alias-virtual-fb2e1793c6/0/cache/eslint-import-resolver-alias-npm-1.1.2-19bb9eab39-3fbb9aeda9.zip/node_modules/eslint-import-resolver-alias/",\
+        ["virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:1.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/eslint-import-resolver-alias-virtual-2a73bd67d6/0/cache/eslint-import-resolver-alias-npm-1.1.2-19bb9eab39-3fbb9aeda9.zip/node_modules/eslint-import-resolver-alias/",\
           "packageDependencies": [\
-            ["eslint-import-resolver-alias", "virtual:66e05843a10f35cc144d871039fda040d7e9fe73a46ba6cd7db0370c6ac288d3847988181cd54107b061cbc7500ae8efaa2e5d3459ce4b50ad1ac7889f906ac9#npm:1.1.2"],\
+            ["eslint-import-resolver-alias", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:1.1.2"],\
             ["@types/eslint-plugin-import", null],\
             ["eslint-plugin-import", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.28.0"]\
           ],\
@@ -9840,6 +9841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cypress", "npm:12.1.0"],\
             ["dayjs", "npm:1.11.9"],\
             ["eslint", "npm:8.47.0"],\
+            ["eslint-import-resolver-alias", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:1.1.2"],\
             ["eslint-plugin-cypress", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.12.1"],\
             ["eslint-plugin-import", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:2.28.0"],\
             ["eslint-plugin-jest", "virtual:45eb675b3e40720a699577219b79bf7864e82566a946245338e440ca1abc1a0b36327676a6861fe77dcd0fc0ceac3345c3e9607d72d3c16f2df7df3ac8ffe255#npm:27.2.3"],\

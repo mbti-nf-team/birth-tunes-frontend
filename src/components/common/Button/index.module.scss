@@ -1,0 +1,68 @@
+@import "/src/styles/main.scss";
+
+.buttonWrapper {
+  @include text("Body");
+  position: relative;
+  transform: translate(0, 0);
+  user-select: none;
+  overflow: hidden;
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px 1rem 7px 1rem;
+  border: 2px solid;
+  width: 100%;
+
+  &:disabled {
+    color: color("scale-gray-700");
+    background-color: color("scale-gray-500");
+    border-top-color: color("scale-white");
+    border-left-color: color("scale-white");
+    border-bottom-color: color("scale-gray-700");
+    border-right-color: color("scale-gray-700");
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    &.primary {
+      color: color("scale-cyan-300");
+      background-color: color("scale-cyan-700");
+      border-bottom-color: color("scale-white");
+      border-right-color: color("scale-white");
+      border-top-color: color("scale-cyan-800");
+      border-left-color: color("scale-cyan-800");
+    }
+
+    &.secondary {
+      color: color("scale-yellow");
+      background-color: color("scale-gray-600");
+      border-bottom-color: color("scale-white");
+      border-right-color: color("scale-white");
+      border-top-color: color("scale-gray-800");
+      border-left-color: color("scale-gray-800");
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+    border-top-color: color("scale-white");
+    border-left-color: color("scale-white");
+
+    &.primary {
+      color: color("scale-white");
+      background-color: color("scale-cyan-600");
+      border-bottom-color: color("scale-cyan-800");
+      border-right-color: color("scale-cyan-800");
+    }
+
+    &.secondary {
+      color: color("scale-gray-900");
+      background-color: color("scale-gray-500");
+      border-bottom-color: color("scale-gray-800");
+      border-right-color: color("scale-gray-800");
+    }
+  }
+}

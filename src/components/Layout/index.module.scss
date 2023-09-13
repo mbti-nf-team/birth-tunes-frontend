@@ -1,0 +1,66 @@
+@import "/src/styles/main.scss";
+
+.layoutWrapper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-color: color("scale-gray-900");
+
+  @include desktop {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contentWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+
+    @include desktop {
+      width: 640px;
+      height: 568px;
+      padding: 72px;
+    }
+
+    .backgroundImage {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    .contentBox {
+      position: relative;
+      margin: 0 auto;
+      background-color: color("scale-indigo");
+      min-height: calc(var(--vh, 1vh) * 100);
+      width: 100%;
+      height: auto;
+      padding: 80px 20px;
+    
+      @include desktop {
+        padding: 0px;
+        border: 8px solid color("scale-black");
+        border-radius: 4px;
+        overflow-y: auto;
+        width: 480px;
+        height: 360px;
+        box-sizing: content-box;
+        min-height: initial;
+      }
+    }
+  }
+}
