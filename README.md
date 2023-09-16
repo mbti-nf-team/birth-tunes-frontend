@@ -1,4 +1,4 @@
-# birth-tunes-frontend
+# <img src="./images/82ppl_favicon.png" width="30px" height="30px"> birth-tunes-frontend
 
 <a href="https://github.com/mbti-nf-team/birth-tunes-frontend/actions/workflows/ci.yml">
   <img src="https://img.shields.io/github/actions/workflow/status/mbti-nf-team/birth-tunes-frontend/ci.yml?branch=main&label=CI&logo=GitHub&style=flat-square" />
