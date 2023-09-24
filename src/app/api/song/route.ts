@@ -18,7 +18,10 @@ export async function GET(request: NextRequest) {
       // NOTE - 정적인 데이터라 한시간 캐시
       revalidate: ONE_HOUR,
     },
-    headers: requestHeaders,
+    headers: {
+      ...requestHeaders,
+      'nfteam-api-token': process.env.API_HEADER_TOKEN,
+    },
   });
 
   if (response.ok) {
