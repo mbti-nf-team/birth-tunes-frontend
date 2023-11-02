@@ -33,13 +33,15 @@ function BirthSongResult({ birthDate }: Props) {
 
   const {
     data: findBirthSong, isSuccess, isError, isFetching, error: errorFindBirthSong,
-  } = useQuery<FindSong, any>(['birthSong', birthDate], () => fetchSongResult({
-    year: date.year(),
-    month: date.month() + 1,
-    day: date.date(),
-  }), {
+  } = useQuery<FindSong, any>({
+    queryKey: ['birthSong', birthDate],
+    queryFn: () => fetchSongResult({
+      year: date.year() + 1,
+      month: date.month() + 1,
+      day: date.date(),
+    }),
     enabled: !!date && date.isValid(),
-    cacheTime: Infinity,
+    gcTime: Infinity,
     staleTime: Infinity,
   });
 
