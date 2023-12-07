@@ -12,10 +12,10 @@ import dayjs from 'dayjs';
 import Button from '@/components/common/Button';
 import FrameTitle from '@/components/common/FrameTitle';
 import ProgressBar from '@/components/common/ProgressBar';
-import useRenderToast from '@/hooks/useRenderToast';
 import { fetchSongResult } from '@/lib/apis/search';
 import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from '@/lib/constants/ga4';
 import { FindSong } from '@/lib/types/song';
+import useToastStore from '@/stores/toast';
 
 import IframeVideoPlayer from '../IframeVideoPlayer';
 
@@ -26,7 +26,7 @@ type Props = {
 };
 
 function BirthSongResult({ birthDate }: Props) {
-  const renderToast = useRenderToast();
+  const { renderToast } = useToastStore(['renderToast']);
   const resultContainerRef = useRef<HTMLDivElement>(null);
 
   const date = dayjs(birthDate);

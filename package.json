@@ -27,24 +27,24 @@
   },
   "homepage": "https://github.com/mbti-nf-team/unnamed_birth_tunes#readme",
   "dependencies": {
-    "@nf-team/core": "^2.0.1",
-    "@nf-team/react": "^2.3.0",
+    "@nf-team/core": "^2.0.2",
+    "@nf-team/react": "^2.4.4",
     "@tanem/react-nprogress": "^5.0.48",
     "@tanstack/react-query": "^5.4.3",
     "axios": "^1.4.0",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.9",
     "framer-motion": "^10.16.1",
-    "next": "^14.0.1",
+    "next": "^14.0.3",
     "qs": "^6.11.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-ga4": "^2.1.0",
-    "zustand": "^4.4.1"
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.1",
-    "@nf-team/eslint-config": "^2.0.2",
+    "@next/eslint-plugin-next": "^14.0.3",
+    "@nf-team/eslint-config": "^2.1.0",
     "@tanstack/react-query-devtools": "^5.4.3",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
@@ -78,5 +78,5 @@
     "start-server-and-test": "^1.14.0",
     "typescript": "^5.1.6"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.2"
 }
