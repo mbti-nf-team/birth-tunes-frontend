@@ -7,7 +7,7 @@ import {
 import clsx from 'clsx';
 import { AnimationDefinition, motion, Variants } from 'framer-motion';
 
-import useToastStore, { ToastStore } from '@/stores/toast';
+import useToastStore from '@/stores/toast';
 
 import styles from './index.module.scss';
 
@@ -28,19 +28,10 @@ const toastVariants: Variants = {
   },
 };
 
-const toastSelector = (state: ToastStore) => ({
-  isRender: state.isRender,
-  type: state.type,
-  description: state.description,
-  title: state.title,
-  delay: state.delay,
-  closeToast: state.closeToast,
-});
-
 function Toast() {
   const {
     isRender, title, closeToast, delay, type, description,
-  } = useToastStore(toastSelector);
+  } = useToastStore(['isRender', 'type', 'description', 'title', 'delay', 'closeToast']);
 
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isOpenToast, setIsOpenToast] = useState<boolean>(false);
