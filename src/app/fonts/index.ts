@@ -9,6 +9,7 @@ const dungGeunMoFont = localFont({
     },
   ],
   display: 'swap',
+  preload: true,
   fallback: [
     'DungGeunMo',
     '-apple-system',
