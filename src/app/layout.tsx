@@ -1,11 +1,11 @@
 import ReactGA from 'react-ga4';
 
-import localFont from 'next/font/local';
 import Script from 'next/script';
 
 import Toast from '@/components/common/Toast';
 import Layout from '@/components/Layout';
 
+import dungGeunMoFont from './fonts';
 import Providers from './providers';
 
 import 'src/styles/normalize.css';
@@ -29,33 +29,6 @@ export const metadata = {
     images: ['./share-img.png'],
   },
 };
-
-const dungGeunMoFont = localFont({
-  src: [
-    {
-      path: './fonts/korean/DungGeunMo.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  fallback: [
-    'DungGeunMo',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'system-ui',
-    'Roboto',
-    'Helvetica Neue',
-    'Segoe UI',
-    'Apple SD Gothic Neo',
-    'Noto Sans KR',
-    'Malgun Gothic',
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'sans-serif',
-  ],
-});
 
 ReactGA.initialize(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
   testMode: process.env.NODE_ENV === 'development',

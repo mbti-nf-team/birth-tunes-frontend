@@ -1,7 +1,6 @@
 'use client';
 
 import { useCallback, useEffect, useRef } from 'react';
-import ReactGA from 'react-ga4';
 
 import { removeNullable } from '@nf-team/core';
 import { DelayRenderComponent } from '@nf-team/react';
@@ -12,8 +11,8 @@ import dayjs from 'dayjs';
 import Button from '@/components/common/Button';
 import FrameTitle from '@/components/common/FrameTitle';
 import ProgressBar from '@/components/common/ProgressBar';
+import useActivityLog from '@/hooks/useActivityLog';
 import { fetchSongResult } from '@/lib/apis/search';
-import { GA4_EVENT_ACTION, GA4_EVENT_NAME, GA4_EVENT_TYPE } from '@/lib/constants/ga4';
 import { FindSong } from '@/lib/types/song';
 import useToastStore from '@/stores/toast';
 
@@ -26,6 +25,7 @@ type Props = {
 };
 
 function BirthSongResult({ birthDate }: Props) {
+  const { sendEvent } = useActivityLog();
   const { renderToast } = useToastStore(['renderToast']);
   const resultContainerRef = useRef<HTMLDivElement>(null);
 
@@ -55,20 +55,26 @@ function BirthSongResult({ birthDate }: Props) {
 
       renderToast({ description: 'URL을 복사했습니다.', type: 'success' });
 
-      ReactGA.event(GA4_EVENT_NAME.share_link_success_clicked, {
-        action: GA4_EVENT_ACTION.click,
-        type: GA4_EVENT_TYPE.success,
-        url: shareUrl,
-        date: birthDate,
+      sendEvent({
+        name: 'share_link_success_clicked',
+        type: 'success',
+        action: 'click',
+        value: {
+          url: shareUrl,
+          date: birthDate,
+        },
       });
     } catch (error) {
       renderToast({ description: 'URL 복사에 실패했습니다.', type: 'error' });
 
-      ReactGA.event(GA4_EVENT_NAME.share_link_failed_clicked, {
-        action: GA4_EVENT_ACTION.click,
-        type: GA4_EVENT_TYPE.error,
-        error,
-        date: birthDate,
+      sendEvent({
+        name: 'share_link_failed_clicked',
+        type: 'error',
+        action: 'click',
+        value: {
+          error,
+          date: birthDate,
+        },
       });
     }
   }, [birthDate]);
@@ -81,11 +87,14 @@ function BirthSongResult({ birthDate }: Props) {
 
   useEffect(() => {
     if (isError) {
-      ReactGA.event(GA4_EVENT_NAME.result_song_load_failed, {
-        action: GA4_EVENT_ACTION.fail,
-        type: GA4_EVENT_TYPE.error,
-        errorCode: errorFindBirthSong?.code,
-        errorMessage: errorFindBirthSong?.message,
+      sendEvent({
+        name: 'result_song_load_failed',
+        type: 'error',
+        action: 'fail',
+        value: {
+          errorCode: errorFindBirthSong?.code,
+          errorMessage: errorFindBirthSong?.message,
+        },
       });
     }
   }, [isError, errorFindBirthSong]);
