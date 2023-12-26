@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 const dungGeunMoFont = localFont({
   src: [
     {
-      path: './fonts/korean/DungGeunMo.woff2',
+      path: './korean/DungGeunMo.woff2',
       weight: '400',
       style: 'normal',
     },
