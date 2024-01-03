@@ -1,4 +1,4 @@
-@import "/src/styles/main.scss";
+@import "/src/styles/main";
 
 .progressContainer {
   display: flex;
@@ -10,6 +10,7 @@
 
   .progressText {
     @include text("Body", "scale-gray-400");
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;

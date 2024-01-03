@@ -45,6 +45,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.3",
     "@nf-team/eslint-config": "^2.1.0",
+    "@nf-team/stylelint-config": "^1.1.1",
     "@tanstack/react-query-devtools": "^5.4.3",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
@@ -75,6 +76,7 @@
     "react-test-renderer": "^18.2.0",
     "sass": "^1.66.1",
     "start-server-and-test": "^1.14.0",
+    "stylelint": "^15.10.0",
     "typescript": "^5.1.6"
   },
   "packageManager": "yarn@4.0.2"

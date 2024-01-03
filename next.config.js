@@ -1,3 +1,5 @@
+const path = require('path');
+
 const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
@@ -11,6 +13,9 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
     esmExternals: 'loose',
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
   compiler: {
     reactRemoveProperties: isProd && {
