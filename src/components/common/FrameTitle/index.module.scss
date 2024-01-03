@@ -1,4 +1,4 @@
-@import "/src/styles/main.scss";
+@import "/src/styles/main";
 
 .frameTitleWrapper {
   display: flex;
@@ -6,33 +6,6 @@
   justify-content: center;
   align-items: center;
   align-self: stretch;
-
-  &.default {
-    background-color: color("scale-ivory");
-
-    .title {
-      border: 2px solid color("scale-gray-900");
-      @include text("Body", "scale-gray-900");
-    }
-  }
-
-  &.success {
-    background-color: color("scale-green");
-
-    .title {
-      border: 2px solid color("scale-gray-900");
-      @include text("Body", "scale-gray-900");
-    }
-  }
-
-  &.danger {
-    background-color: color("scale-crimson");
-
-    .title {
-      border: 2px solid color("scale-white");
-      @include text("Body", "scale-white");
-    }
-  }
 
   .title {
     display: flex;
@@ -42,5 +15,35 @@
     flex-direction: column;
     flex: 1 0 0;
     text-align: center;
+  }
+
+  &.default {
+    background-color: color("scale-ivory");
+
+    .title {
+      border: 2px solid color("scale-gray-900");
+
+      @include text("Body", "scale-gray-900");
+    }
+  }
+
+  &.success {
+    background-color: color("scale-green");
+
+    .title {
+      border: 2px solid color("scale-gray-900");
+
+      @include text("Body", "scale-gray-900");
+    }
+  }
+
+  &.danger {
+    background-color: color("scale-crimson");
+
+    .title {
+      border: 2px solid color("scale-white");
+
+      @include text("Body", "scale-white");
+    }
   }
 }

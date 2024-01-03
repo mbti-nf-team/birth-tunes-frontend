@@ -1,4 +1,4 @@
-@import "/src/styles/main.scss";
+@import "/src/styles/main";
 
 .toastContainer {
   position: fixed;
@@ -51,6 +51,7 @@
 
     .title {
       @include text("Body", "scale-white");
+
       background-color: color("scale-black");
       padding: 0.125rem 0.375rem;
       overflow-wrap: break-word;

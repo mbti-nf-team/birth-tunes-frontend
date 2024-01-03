@@ -1,4 +1,4 @@
-@import "./mixin/text.scss";
+@import "./mixin/text";
 
 // @font-face {
 //   font-family: "DungGeunMo";
@@ -20,19 +20,18 @@
 
 :root {
   /* default */
-  --scale-white: #ffffff;
-  --scale-black: #000000;
+  --scale-white: #fff;
+  --scale-black: #000;
 
   /* basic */
-  --scale-gray-200: #eeeeee;
-  --scale-gray-300: #dddddd;
-  --scale-gray-400: #cccccc;
-  --scale-gray-500: #bbbbbb;
-  --scale-gray-600: #999999;
+  --scale-gray-200: #eee;
+  --scale-gray-300: #ddd;
+  --scale-gray-400: #ccc;
+  --scale-gray-500: #bbb;
+  --scale-gray-600: #999;
   --scale-gray-700: #808080;
-  --scale-gray-800: #666666;
+  --scale-gray-800: #666;
   --scale-gray-900: #262626;
-
   --scale-cyan-200: #c2fffe;
   --scale-cyan-300: #5cfffd;
   --scale-cyan-400: #02edeb;
@@ -41,33 +40,29 @@
   --scale-cyan-700: #029795;
   --scale-cyan-800: #046261;
   --scale-cyan-900: #023c3c;
-
-  --scale-ivory: #ffff99;
+  --scale-ivory: #ff9;
 
   /* variation */
-  --scale-blue: #5555ff;
-  --scale-frenchblue: #666699;
+  --scale-blue: #55f;
+  --scale-frenchblue: #669;
   --scale-indigo: #0000af;
   --scale-emerald: #00ad00;
   --scale-green: #00ff26;
-  --scale-grass: #999900;
+  --scale-grass: #990;
   --scale-gold: #d0af3e;
   --scale-yellow: #ffff05;
-  --scale-copper: #cc6633;
+  --scale-copper: #c63;
   --scale-crimson: #b80000;
-}
 
-:root {
+  /* font */
   --headline-font-size: 2rem;
   --headline-line-height: 2rem;
   --headline-font-weight: 400;
-
   --body-font-size: 1.5rem;
   --body-line-height: 1.5rem;
   --body-font-weight: 400;
-}
 
-:root {
+  /* z-index */
   --toast-z-index: 99;
 }
 
@@ -99,14 +94,13 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
+  margin: 0;
 }
 
 div,
 input,
 textarea,
 button,
-select,
 a {
   -webkit-tap-highlight-color: transparent;
 }

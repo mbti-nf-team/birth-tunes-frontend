@@ -1,4 +1,4 @@
-@import "./functions.scss";
+@import "./functions";
 
 @mixin text($font, $color-code: "") {
   @if $font == "Headline" {

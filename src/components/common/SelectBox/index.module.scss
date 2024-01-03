@@ -1,4 +1,4 @@
-@import "/src/styles/main.scss";
+@import "/src/styles/main";
 
 .selectBoxWrapper {
   width: 100%;
@@ -25,6 +25,7 @@
 
   .selectWrapper {
     @include text("Body");
+
     position: relative;
     transform: translate(0, 0);
     user-select: none;
@@ -38,41 +39,12 @@
     justify-content: center;
     text-align: left;
     outline: none;
-    border-radius: 0px;
-    padding: 5px 1rem 7px 1rem;
+    border-radius: 0;
+    padding: 5px 1rem 7px;
     border: 2px solid;
     width: 100%;
 
-    &:disabled {
-      color: color("scale-gray-700");
-      background-color: color("scale-gray-500");
-      border-top-color: color("scale-white");
-      border-left-color: color("scale-white");
-      border-bottom-color: color("scale-gray-700");
-      border-right-color: color("scale-gray-700");
-    }
-
-    &:not(:disabled):not(.disabled):focus {
-      &.primary {
-        color: color("scale-cyan-300");
-        background-color: color("scale-cyan-700");
-        border-bottom-color: color("scale-white");
-        border-right-color: color("scale-white");
-        border-top-color: color("scale-cyan-800");
-        border-left-color: color("scale-cyan-800");
-      }
-
-      &.secondary {
-        color: color("scale-yellow");
-        background-color: color("scale-gray-600");
-        border-bottom-color: color("scale-white");
-        border-right-color: color("scale-white");
-        border-top-color: color("scale-gray-800");
-        border-left-color: color("scale-gray-800");
-      }
-    }
-
-    &:not(:disabled):not(.disabled) {
+    &:not(:disabled, .disabled) {
       cursor: pointer;
       border-top-color: color("scale-white");
       border-left-color: color("scale-white");
@@ -89,6 +61,26 @@
         background-color: color("scale-gray-500");
         border-bottom-color: color("scale-gray-800");
         border-right-color: color("scale-gray-800");
+      }
+    }
+
+    &:disabled {
+      color: color("scale-gray-700");
+      background-color: color("scale-gray-500");
+      border-color: color("scale-white") color("scale-gray-700") color("scale-gray-700") color("scale-white");
+    }
+
+    &:not(:disabled, .disabled):focus {
+      &.primary {
+        color: color("scale-cyan-300");
+        background-color: color("scale-cyan-700");
+        border-color: color("scale-cyan-800") color("scale-white") color("scale-white") color("scale-cyan-800");
+      }
+
+      &.secondary {
+        color: color("scale-yellow");
+        background-color: color("scale-gray-600");
+        border-color: color("scale-gray-800") color("scale-white") color("scale-white") color("scale-gray-800");
       }
     }
   }
