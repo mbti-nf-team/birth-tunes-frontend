@@ -36,7 +36,7 @@ function BirthSongResult({ birthDate }: Props) {
   } = useQuery<FindSong, any>({
     queryKey: ['birthSong', birthDate],
     queryFn: () => fetchSongResult({
-      year: date.year() + 1,
+      year: date.year(),
       month: date.month() + 1,
       day: date.date(),
     }),
