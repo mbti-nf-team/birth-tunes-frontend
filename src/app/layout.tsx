@@ -5,7 +5,7 @@ import Script from 'next/script';
 import Toast from '@/components/common/Toast';
 import Layout from '@/components/Layout';
 
-import dungGeunMoFont from './fonts';
+import dungGeunMoFont from './_fonts';
 import Providers from './providers';
 
 import 'src/styles/normalize.css';
