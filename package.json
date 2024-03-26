@@ -35,7 +35,7 @@
     "clsx": "^2.0.0",
     "dayjs": "^1.11.9",
     "framer-motion": "^10.16.1",
-    "next": "^14.1.0",
+    "next": "^14.1.4",
     "qs": "^6.11.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -43,7 +43,7 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.1.0",
+    "@next/eslint-plugin-next": "^14.1.4",
     "@nf-team/eslint-config": "^2.1.0",
     "@nf-team/stylelint-config": "^1.1.1",
     "@tanstack/react-query-devtools": "^5.4.3",
@@ -79,5 +79,5 @@
     "stylelint": "^15.10.0",
     "typescript": "^5.1.6"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }
