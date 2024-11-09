@@ -1,6 +1,6 @@
 import { Metadata, ResolvingMetadata } from 'next';
 
-import { removeNullable } from '@nf-team/core';
+import { getStringOrDefault } from '@nf-team/core';
 import dayjs from 'dayjs';
 
 import Footer from '@/components/Footer';
@@ -45,7 +45,7 @@ export async function generateMetadata(
 }
 
 function Home({ searchParams }: Props) {
-  const defaultBirthDate = removeNullable(searchParams?.date);
+  const defaultBirthDate = getStringOrDefault(searchParams?.date);
 
   const isNotValidDefaultDate = defaultBirthDate
     && (!dayjs(defaultBirthDate).isValid() || dayjs().isBefore(dayjs(defaultBirthDate)));

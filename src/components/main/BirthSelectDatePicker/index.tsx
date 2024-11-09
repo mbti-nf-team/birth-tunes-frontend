@@ -2,7 +2,7 @@ import {
   ChangeEvent, Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState,
 } from 'react';
 
-import { checkNumber, generateArrayOfNumber } from '@nf-team/core';
+import { createNumberArray, getNumberOrDefault } from '@nf-team/core';
 import { useUpdateEffect } from '@nf-team/react';
 import dayjs from 'dayjs';
 
@@ -55,7 +55,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
     if (year && month) {
       const targetDays = dayjs(`${year}-${month}`).daysInMonth();
 
-      setDaysRange(checkNumber(targetDays));
+      setDaysRange(getNumberOrDefault(targetDays));
     }
   }, [month, year]);
 
@@ -80,7 +80,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
   return (
     <div className={styles.birthSelectDatePickerWrapper}>
       <SelectBox id="year" emptyOption="생년" value={year} onChange={handleChange('year')}>
-        {generateArrayOfNumber(yearRange).map((number) => {
+        {createNumberArray(yearRange).map((number) => {
           const targetYear = nowYear - number;
 
           return (
@@ -89,7 +89,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
         })}
       </SelectBox>
       <SelectBox id="month" emptyOption="월" value={month} onChange={handleChange('month')}>
-        {generateArrayOfNumber(monthRange).map((number) => {
+        {createNumberArray(monthRange).map((number) => {
           const targetMonth = number + 1;
 
           return (
@@ -98,7 +98,7 @@ function BirthSelectDatePicker({ defaultBirthDate, onBirthChange }: Props) {
         })}
       </SelectBox>
       <SelectBox id="days" emptyOption="일" value={days} onChange={handleChange('days')} disabled={!year || !month}>
-        {generateArrayOfNumber(daysRange).map((day) => {
+        {createNumberArray(daysRange).map((day) => {
           const targetDays = day + 1;
 
           return (

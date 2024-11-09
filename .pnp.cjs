@@ -28,9 +28,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@next/eslint-plugin-next", "npm:14.2.3"],\
-          ["@nf-team/core", "npm:2.1.0"],\
+          ["@nf-team/core", "npm:3.0.1"],\
           ["@nf-team/eslint-config", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:3.4.0"],\
-          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.1"],\
+          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.2"],\
           ["@nf-team/stylelint-config", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:1.1.1"],\
           ["@tanem/react-nprogress", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:5.0.48"],\
           ["@tanstack/react-query", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:5.59.16"],\
@@ -1608,10 +1608,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@nf-team/core", [\
-      ["npm:2.1.0", {\
-        "packageLocation": "./.yarn/cache/@nf-team-core-npm-2.1.0-c5b1c29f0b-d1626bd75f.zip/node_modules/@nf-team/core/",\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@nf-team-core-npm-3.0.1-20c4cddc8a-16f0912284.zip/node_modules/@nf-team/core/",\
         "packageDependencies": [\
-          ["@nf-team/core", "npm:2.1.0"]\
+          ["@nf-team/core", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1672,17 +1672,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@nf-team/react", [\
-      ["npm:2.7.1", {\
-        "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.7.1-4df50df0a5-bf13a0df2c.zip/node_modules/@nf-team/react/",\
+      ["npm:2.7.2", {\
+        "packageLocation": "./.yarn/cache/@nf-team-react-npm-2.7.2-6f8b8a3e9c-037cc7dc3f.zip/node_modules/@nf-team/react/",\
         "packageDependencies": [\
-          ["@nf-team/react", "npm:2.7.1"]\
+          ["@nf-team/react", "npm:2.7.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.1", {\
-        "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-c762f35f82/0/cache/@nf-team-react-npm-2.7.1-4df50df0a5-bf13a0df2c.zip/node_modules/@nf-team/react/",\
+      ["virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.2", {\
+        "packageLocation": "./.yarn/__virtual__/@nf-team-react-virtual-697c95fbb3/0/cache/@nf-team-react-npm-2.7.2-6f8b8a3e9c-037cc7dc3f.zip/node_modules/@nf-team/react/",\
         "packageDependencies": [\
-          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.1"],\
+          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.2"],\
           ["@types/react", "npm:18.3.1"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["react", "npm:18.3.1"],\
@@ -3406,9 +3406,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["birth-tunes-frontend", "workspace:."],\
           ["@next/eslint-plugin-next", "npm:14.2.3"],\
-          ["@nf-team/core", "npm:2.1.0"],\
+          ["@nf-team/core", "npm:3.0.1"],\
           ["@nf-team/eslint-config", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:3.4.0"],\
-          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.1"],\
+          ["@nf-team/react", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:2.7.2"],\
           ["@nf-team/stylelint-config", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:1.1.1"],\
           ["@tanem/react-nprogress", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:5.0.48"],\
           ["@tanstack/react-query", "virtual:e45e09d0641e8463a15803d185f02794e031faf4b29c11a027f9ba60c39d2250637c8c06b3b1e44481a91dce533952ebaf555d9883fc1491921c88f1da58906f#npm:5.59.16"],\
