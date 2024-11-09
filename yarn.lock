@@ -1002,10 +1002,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nf-team/core@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@nf-team/core@npm:2.1.0"
-  checksum: 10/d1626bd75ff37bfa5871469117e45909597da2ae5f5c497b631fecfb9f681ae8f1243a5e99f7af2564352f298d30d1e8b0086748ecaf7fe5d6543dc16e4940d7
+"@nf-team/core@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@nf-team/core@npm:3.0.1"
+  checksum: 10/16f0912284bebaf66245d0a4050f02ad97f7dfaa22be7d25b92dd79af5247caae3fe7651ed76aee4add835a4362209572a33c1a56d0a2aaa6031543fd0e71992
   languageName: node
   linkType: hard
 
@@ -1038,13 +1038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nf-team/react@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "@nf-team/react@npm:2.7.1"
+"@nf-team/react@npm:^2.7.2":
+  version: 2.7.2
+  resolution: "@nf-team/react@npm:2.7.2"
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: 10/bf13a0df2ca47552cface1789de681c56340ac48209d270ed2670e4887f2a0a735cc5cf15a7e421730b502ce3fb6fcd8d8d73795d2a6b44f4aed9943e2b61f3d
+  checksum: 10/037cc7dc3f6910b9681c7054f972f880366175a5d638ffd457cd2426b74647ade803a3aeb7d7931f0171f14e2af8036cfda1c61587130030fa44ddf14a56cf0c
   languageName: node
   linkType: hard
 
@@ -2332,9 +2332,9 @@ __metadata:
   resolution: "birth-tunes-frontend@workspace:."
   dependencies:
     "@next/eslint-plugin-next": "npm:^14.2.3"
-    "@nf-team/core": "npm:^2.1.0"
+    "@nf-team/core": "npm:^3.0.1"
     "@nf-team/eslint-config": "npm:^3.4.0"
-    "@nf-team/react": "npm:^2.7.1"
+    "@nf-team/react": "npm:^2.7.2"
     "@nf-team/stylelint-config": "npm:^1.1.1"
     "@tanem/react-nprogress": "npm:^5.0.48"
     "@tanstack/react-query": "npm:^5.59.16"

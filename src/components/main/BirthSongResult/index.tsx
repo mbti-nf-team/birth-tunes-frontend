@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from 'react';
 
-import { removeNullable } from '@nf-team/core';
+import { getStringOrDefault } from '@nf-team/core';
 import { DelayRenderComponent } from '@nf-team/react';
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
@@ -124,7 +124,9 @@ function BirthSongResult({ birthDate }: Props) {
                 {findBirthSong?.title}
               </div>
             </FrameTitle>
-            <IframeVideoPlayer youtubeVideoId={removeNullable(findBirthSong?.youtube_video_id)} />
+            <IframeVideoPlayer
+              youtubeVideoId={getStringOrDefault(findBirthSong?.youtube_video_id)}
+            />
           </div>
           <Button buttonType="secondary" type="button" onClick={onClickShareLink}>결과 공유하기</Button>
         </div>
