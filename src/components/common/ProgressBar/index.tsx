@@ -1,5 +1,5 @@
 import { useNProgress } from '@tanem/react-nprogress';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 
 import styles from './index.module.scss';
 
