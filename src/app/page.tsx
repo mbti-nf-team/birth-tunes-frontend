@@ -11,14 +11,16 @@ import { metadata } from './layout';
 import styles from './index.module.scss';
 
 type Props = {
-  searchParams: { [key: string]: string | undefined; };
+  searchParams: Promise<{ [key: string]: string | undefined; }>;
 };
 
 export async function generateMetadata(
   { searchParams }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const date = searchParams?.date;
+  const resolvedSearchParams = await searchParams;
+
+  const date = resolvedSearchParams?.date;
 
   if (!date) {
     return metadata;
@@ -44,8 +46,10 @@ export async function generateMetadata(
   };
 }
 
-function Home({ searchParams }: Props) {
-  const defaultBirthDate = getStringOrDefault(searchParams?.date);
+async function Home({ searchParams }: Props) {
+  const resolvedSearchParams = await searchParams;
+
+  const defaultBirthDate = getStringOrDefault(resolvedSearchParams?.date);
 
   const isNotValidDefaultDate = defaultBirthDate
     && (!dayjs(defaultBirthDate).isValid() || dayjs().isBefore(dayjs(defaultBirthDate)));

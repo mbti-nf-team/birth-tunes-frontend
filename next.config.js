@@ -9,7 +9,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
-  swcMinify: true,
   experimental: {
     typedRoutes: true,
     esmExternals: 'loose',

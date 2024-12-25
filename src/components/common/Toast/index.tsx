@@ -5,7 +5,7 @@ import {
 } from 'react';
 
 import clsx from 'clsx';
-import { AnimationDefinition, motion, Variants } from 'framer-motion';
+import { AnimationDefinition, motion, Variants } from 'motion/react';
 
 import useToastStore from '@/stores/toast';
 
