@@ -16,18 +16,19 @@ const title = '내 생일에 1위를 한 노래 찾기';
 const description = '선택한 날에 1위한 곡 확인하기';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_ORIGIN || 'http://localhost:3000'),
   title,
   description,
   openGraph: {
     title,
     description,
     url: process.env.NEXT_PUBLIC_ORIGIN,
-    images: ['./share-img.png'],
+    images: ['/share-img.png'],
   },
   twitter: {
     description,
     title,
-    images: ['./share-img.png'],
+    images: ['/share-img.png'],
   },
 };
 
