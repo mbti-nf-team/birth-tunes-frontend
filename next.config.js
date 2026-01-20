@@ -9,8 +9,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
+  typedRoutes: true,
   experimental: {
-    typedRoutes: true,
     esmExternals: 'loose',
   },
   sassOptions: {

@@ -1,5 +1,6 @@
 import ReactGA from 'react-ga4';
 
+import { Metadata } from 'next';
 import Script from 'next/script';
 
 import Toast from '@/components/common/Toast';
@@ -14,7 +15,7 @@ import 'src/styles/global.scss';
 const title = '내 생일에 1위를 한 노래 찾기';
 const description = '선택한 날에 1위한 곡 확인하기';
 
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
   openGraph: {
