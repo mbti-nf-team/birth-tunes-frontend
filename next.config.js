@@ -9,6 +9,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
+  images: {
+    qualities: [25, 50, 75, 100],
+  },
   typedRoutes: true,
   experimental: {
     esmExternals: 'loose',
