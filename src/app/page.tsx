@@ -34,13 +34,13 @@ export async function generateMetadata(
     title: metadata.title,
     description,
     openGraph: {
-      title: metadata.title,
+      title: metadata.title || '',
       images: previousImages,
       description,
       url: `${process.env.NEXT_PUBLIC_ORIGIN}?date=${date}`,
     },
     twitter: {
-      title: metadata.title,
+      title: metadata.title || '',
       description,
     },
   };

@@ -5,6 +5,7 @@ module.exports = {
   },
   ignorePatterns: [
     '/.next',
+    'next-env.d.ts',
   ],
   extends: [
     '@nf-team/eslint-config',
